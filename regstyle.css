@@ -1,0 +1,28 @@
+.form{
+    margin:10%;
+    border: 10px solid;
+    background-color:#E8E5E1;
+    padding: 5vw;
+}
+
+.title{
+    position:relative;
+    margin-bottom: 20px;
+    padding-left: 20vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    
+    display: flexbox;
+    border: 1px solid black;
+    
+}
+#regbtn{
+    position: absolute;
+    
+}
+.error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding:1px 20px 1px 20px;
+  }

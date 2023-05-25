@@ -1,0 +1,64 @@
+.tb-container
+{
+    overflow-x: auto;
+    width:100%;
+    top:10vh;
+    position: absolute;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+#products thead{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #04AA6D;
+    color:white;
+}
+#products{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.btn-class{
+    position:absolute;
+    top:3vh;
+    right:8vw;
+}
+button{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.search-container{
+    position: absolute;
+    top:70vh;
+    right: 16vw;
+
+}
+tr:hover{
+    background-color: #ccffcc	;
+}
+.input-group{
+    display: inline-flexbox;
+}
+.item{
+    float:left
+}
+#search-button
+{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 40px;
+}
+@media (max-width:500px)
+{
+    .tb-container,th,td{
+        width: 200%;
+
+    }
+}
