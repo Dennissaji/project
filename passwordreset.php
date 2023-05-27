@@ -4,16 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forgotpassword.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    
 </head>
 <body>
-    <form action="javascript:void(0)">
-            <label> enter your email </label>
-           <input type="email" name="email" id="email" required>
-           <br><br>
-           <input type="submit" value="submit" id="submit">
-           
-    </form>
+<div class="card text-center carddiv" style="width: 400px;">
+    <div class="card-header h5 heading text-white bg-primary"><h3>Password Reset</h3></div>
+    <div class="spacer"></div>
+    <div class="card-body px-5">
+        <p class="card-text py-2">
+            Enter your email address and we'll send you an email with instructions to reset your password.
+        </p>
+        <div class="spacer"></div>
+        <div class="form-outline">
+            <input type="email" id="email" class="form-control my-3"  placeholder="enter your email"/>
+        </div>
+        <div class="spacer"></div>
+        <button class="btn btn-primary w-100" id="submit">Reset password</button>
+        <div class="d-flex justify-content-between mt-4">
+        <div class="spacer"></div>
+            <a class="login" href="http://localhost/project/login/login.php">Login</a>
+            <div class="spacer"></div>
+            <a class="register" href="http://localhost/project/login/reg.php">Register</a>
+        </div>
+    </div>
+</div>
 </body>
 <script type="module">
 
@@ -44,6 +67,8 @@
   // Initialize Firebase
 
   const auth = getAuth(app);
+  const element = document.getElementById('submit');
+  console.log(element);
   submit.addEventListener("click", () => 
   {
 let email = document.getElementById('email').value;

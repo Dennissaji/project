@@ -1,9 +1,15 @@
+body{
+    background-color: rgb(36, 34, 34);
+}
 .form{
     margin:10%;
-    border: 10px solid;
-    background-color:#E8E5E1;
+    border: none;
+    background-color:#fafafa;
     padding: 5vw;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgb(33, 32, 32), 0 6px 20px 0 rgb(103, 103, 103);
 }
+
 
 .title{
     position:relative;
@@ -13,7 +19,7 @@
     font-size: 30px;
     
     display: flexbox;
-    border: 1px solid black;
+    
     
 }
 #regbtn{
