@@ -28,19 +28,22 @@
     position: absolute;
     top:100%;
     right:5vw;
-    width:15vw;
+    width:18vw;
     height: 39vh;
-    padding-right: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
     margin: 0%;
     max-height: 0px;
     overflow: hidden;
-    background-color: #d1fcff;
+    background-color: #e8e8e8;
+    margin-top: 1vh;
+
 }
 .sub-menu-wrap.open-menu{
     max-height: 400px;
 }
 .sub-menu{
-    background: #fff;
+    background: #000000;
     padding: 5px;
     margin: 0%;
 }
@@ -62,14 +65,14 @@
     border: 0;
     height: 1px;
     width: 100%;
-    background:black;
-    color: black;
+    background:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 .sub-menu-link{
     display: flex;
     align-items: center;
     text-decoration: none;
-    color:#525252;
+    color:#000000;
     margin:0px;
     
 

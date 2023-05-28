@@ -175,7 +175,7 @@
                         </div>
                        
                         <div class="dropdown-item">
-                            <a href="#" class="sub-menu-link">
+                            <a href="user_info.php" class="sub-menu-link">
                                 <img src="images/profile.png">
                                 <p>Edit Profile</p>
                                 <span>></span>

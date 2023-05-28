@@ -1,0 +1,104 @@
+body{
+    background: rgba(239, 247, 231, 0.902);
+}
+.form{
+    width: 45vw;
+    height: 105vh;
+    background-color: rgb(255, 255, 255);
+    margin-top: 5vh;
+    margin-left: 25vw;
+    box-shadow: 10px 10px 10px 10px #888888;
+    border: 5px solid rgba(239, 247, 231, 0.902);
+}
+* {box-sizing: border-box;}
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 40vw;
+  margin-bottom: 30px;
+  margin-right: 1vw;
+  margin-left: 2vw;
+
+}
+
+input{
+    border-left: none;
+    border: 1px solid black;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: rgba(239, 247, 231, 0.902);
+  color:black;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+.cont1{
+    padding-top: 6vh;
+}
+.circular--square 
+{ border-radius: 50%;
+  width: fit-content;
+  height: 200px;
+  margin-left: 17vw;
+  margin-top: 10vh; }
+
+.image-container{
+  
+  height: 10vh;
+  margin-bottom: 7vh;
+}
+.btn-container{
+    margin-top: 5vh;
+    margin-left: 20vw;
+}
+.editbtn{
+    background-color:rgba(239, 247, 231, 0.902) ;
+    padding: 10px;
+    text-decoration: solid;
+    border: none;
+    font-weight: bold;
+}
+.submitbtn{
+    background-color: green;
+    color:white;
+    padding:10px 25px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+.row{
+    margin-left: 18vw;
+}
+
+.cont1-edit{
+    margin-top: 30vh;
+}
+
+.edit-picture{
+    margin-left: 19vw;
+    margin-top: 28vh;
+}
+.button{
+  background-color:rgba(239, 247, 231, 0.902);
+  color:black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
