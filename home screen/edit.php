@@ -59,7 +59,33 @@
      </div>
 </form>
 
-  <script type="text/javascript">
+  <script type="module">
+                          // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getAuth, updatePassword,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDqPi8NKMoG61jlfy6fBXahHwyXO0Mgu0o",
+          authDomain: "mini-project-login-6893a.firebaseapp.com",
+          databaseURL: "https://mini-project-login-6893a-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "mini-project-login-6893a",
+          storageBucket: "mini-project-login-6893a.appspot.com",
+          messagingSenderId: "905486507652",
+          appId: "1:905486507652:web:7d07363c0c03cca0ed2cd1",
+          measurementId: "G-5NGV8V7GFH"
+        };
+        const app = initializeApp(firebaseConfig);     
+        // Initialize Firebase
+        const auth = getAuth(app);
+       
+        console.log(auth);
+        
+
+        
     
     $(document).ready(function()
     {
@@ -79,13 +105,35 @@
                 success:function(data)
                 {
                     $("#dispmsg").html(data);
+                    if(data)
+                    { const user = auth.currentUser
+                        console.log(user)
+                      onAuthStateChanged(auth, (user) => {
+                      if (user) {
+                        const newPassword = password;
+                        updatePassword(user, newPassword).then(() => {
+                          alert("firebase password updated successfully");
+                          }).catch((error) => {
+                            alert(error);
+                            alert("fire base error");
+                          });
 
-                }
+                        ;
+                      }       
+                      else{
+                    alert("user not signed in");
+                  }
+                        });
+                    }
+                      
+                    
+                  
+                  }
+
+                })
+              })
             })
-            
-           
-        });
-    });
+    
 
   </script>
     

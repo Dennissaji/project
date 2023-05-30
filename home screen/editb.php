@@ -7,10 +7,10 @@
     $username = $_POST['username'];
     $dsgn = $_POST['dsgn'];
     $phone = $_POST['phone'];
-
+    $password = $_POST['password'];
     $email = $_SESSION['email'];
 
-    $query = "update `users` set username = '$username', designation = '$dsgn', phone = '$phone' where email = '$email'";
+    $query = "update `users` set username = '$username', designation = '$dsgn', phone = '$phone', password = '$password' where email = '$email'";
     $result = mysqli_query($conn,$query);
 
     if($result == 1)
