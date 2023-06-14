@@ -15,7 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.js" crossorigin="anonymous"></script>
     <div class="search">
       <label id="label">Search </label>
-      <input type="text" id="search" autocomplete="off">
+      <input type="text" id="search" placeholder="Search.." autocomplete="off">
     </div> 
     <div id="table-data">
     </div>

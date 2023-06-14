@@ -2,6 +2,18 @@
  include('connect.php');
  $query="select * from `users` where status='pending'";
  $result=mysqli_query($conn,$query);
+
+
+    if(isset($_POST['approve']))
+    {
+       
+        $id=$_POST['id'];
+        $query="update `users` set status='approved' where email='$id' ";
+        $results=mysqli_query($conn,$query);
+        header("home screen/adminhome.php");
+        
+
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,7 +35,6 @@
 <table id="users">
     <tr>
         <th> email address </th>
-        <th> user name</th>
         <th> designation </th>
         <th> role </th>
         <th> Actions </th>
@@ -45,10 +56,10 @@
                     ROW OF EVERY COLUMN -->
                 
                 <td id="email"><?php echo $row['email'];?></td>
-                <td id ="password"><?php echo $row['password'];?></td>
+                <input id="password" type="hidden" value=<?php echo $row['password'];?> disabled />
                 <td><?php echo $row['designation'];?></td>
                 <td><?php echo $row['role'];?></td>
-                <td> <form>
+                <td> <form method="POST">
                     <input type="hidden" name="id" value="<?php echo $row['email'];?>"/>
                     <input type="submit" name="approve" id="approve" value="accept">
                     <button name="reject" id="reject" class="reject" data-email='<?php echo "$email"; ?>' >REJECT</button></td>
@@ -60,28 +71,19 @@
 </table>
 
 </div>
-<script>
-    function back()
-    {
-        window.location.assign("home screen/adminhome.php");
-    }
-</script>
 </body>
-<?php
-    if(isset($_POST['approve']))
-    {
-        include('connect.php');
-        $id=$_POST['id'];
-        $query="update `users` set status='approved' where email='$id' ";
-        $result=mysqli_query($conn,$query);
-        header("home screen/adminhome.php");
-        
-
-    }
+<script>
+function back()
+  {
     
-    ?>
+    window.location.replace('http://localhost/project/login/home%20screen/adminhome.php');
+
+  }
+
+</script>
 
 <script type="module">
+
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
   import { getDatabase } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
@@ -112,7 +114,7 @@
   console.log(element);
   element.addEventListener('click',(e) =>{
     var email = document.getElementById('email').innerText;
-    var password = document.getElementById('password').innerText;
+    var password = document.getElementById('password').value;
     console.log("button clicked");
     console.log(email);
     console.log(password);
@@ -127,5 +129,6 @@
     // ..
   });
   })
+  
 </script>
 </html>

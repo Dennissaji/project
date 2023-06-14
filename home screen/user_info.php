@@ -8,8 +8,12 @@
     $res = $conn->query($sql);
     $row=mysqli_fetch_array($res);
     $imageloc=$row['image'];
-
-
+    if(is_null($imageloc))
+    {
+       $imageloc="user_images/user.png";
+    }
+    
+    
   ?>
 <head>
     <meta charset="UTF-8">
@@ -19,7 +23,20 @@
     <script src="https://kit.fontawesome.com/2aaeb74de6.js" crossorigin="anonymous"></script>
     <title>User Info</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <?php
+  if($_SESSION['role'] == 'admin')
+  {
+    include 'adminnav.php';
+  }
+  else
+  {
+    include 'usernav.php';
+  }
+
+
+?>
+  </head>
 <body>
     
      <div class="form" id="result">
@@ -43,17 +60,18 @@
         
         <div class="input-container">
             <i class="fa fa-user icon"></i>
-            <input class="input-field" type="text" placeholder="Username" name="username" value=<?php echo $row['username']; ?> disabled>
+            <input class="input-field" type="text" placeholder="Username" name="username" value="<?php echo $row['username']; ?>" disabled>
         </div>
 
         <div class="input-container">
             <i class="fa fa-key icon"></i>
-            <input class="input-field" type="password"  placeholder="password" name="password" value=<?php echo $row['password']; ?> disabled>
-        </div>
+            <input class="input-field" type="password"  placeholder="password" name="password" id="password" value="<?php echo $row['password']; ?>" disabled>
+            <i class="far fa-eye-slash fa-eye" id="togglePassword" style="margin-left:-25vw; cursor: pointer;"></i>
+          </div>
 
         <div class="input-container">
             <i class="fa-solid fa-user-tie icon"></i>
-            <input class="input-field" type="text" placeholder="Desigantion" name="dsgn" value=<?php echo $row['designation']; ?> disabled>
+            <input class="input-field" type="text" placeholder="Designation" name="dsgn" value="<?php echo $row['designation']; ?>" disabled>
         </div>
 
         <div class="input-container">
@@ -74,7 +92,7 @@
 
        $("#link").click(function(event)
        {
-        alert("button clicked");
+        
          event.preventDefault();
          $("#editpic").load('editpic.php');
          
@@ -83,5 +101,15 @@
 
     });
 
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
   </script>
 </html>

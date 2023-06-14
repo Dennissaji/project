@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>Login</title>
 </head>
 
@@ -38,16 +39,19 @@
             <div class="col-md-6 right-box">
                 <div class="row align-items-center">
                     <div class="header-text mb-4">
-                        <h2>STOCK MANAGEMENT-Cusat</h2>
-                        <p>lOGIN FORM</FORM>
+                        <h2>INVENTORY MANAGEMENT-SOE</h2>
+                        <p>LOGIN FORM</FORM>
                         </p>
                     </div>
                     <form action="javascript:void(0)" method="POST">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email address" name="email" id="email">
                     </div>
+
                     <div class="input-group mb-1">
-                        <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" name="password" id="password">
+                        
+                        <input class="input-field form-control form-control-lg bg-light fs-6" type="password"  placeholder="password" name="password" id="password">
+                        <i class="far fa-eye fa-eye-slash" id="togglePassword"></i>
                     </div>
                     <div class="input-group mb-5 d-flex justify-content-between">
                         <div class="forgot">
@@ -68,6 +72,15 @@
  </div>
 </body>
     <script type="module">
+      const togglePassword = document.querySelector('#togglePassword');
+      const password = document.querySelector('#password');
+
+      togglePassword.addEventListener('click', function (e) {
+      // toggle the type attribute
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      // toggle the eye slash icon
+      this.classList.toggle('fa-eye-slash'); })
 
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
@@ -113,7 +126,7 @@
          {
     
             const uid = user.uid;
-            alert("user logged in")
+            
             } 
     else {
     alert("user not signed in")

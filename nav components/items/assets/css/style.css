@@ -186,7 +186,7 @@
     background-color: var(--color_Light1);
     left: 260px;
     width: calc(100% - 260px);
-    height: 100vh;
+    height: 0px;
     transition: all .5s ease;
 }
 .sidebar.close ~ .home{

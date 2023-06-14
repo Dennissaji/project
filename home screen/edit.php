@@ -8,7 +8,21 @@
     $res = $conn->query($sql);
     $row=mysqli_fetch_array($res);
     $imageloc=$row['image'];
+    if(is_null($imageloc))
+    {
+       $imageloc="user_images/user.png";
+    }
 
+    if($_SESSION['role'] == 'admin')
+    {
+      include 'adminnav.php';
+    }
+    else
+    {
+      include 'usernav.php';
+    }
+  
+  
 
   ?>
 <head>
@@ -18,6 +32,7 @@
     <link rel="stylesheet" href="user_info.css">
     <script src="https://kit.fontawesome.com/2aaeb74de6.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -39,7 +54,8 @@
 
           <div class="input-container">
             <i class="fa fa-key icon"></i>
-            <input class="input-field" type="password" id="password"  placeholder="password" name="password" value=<?php echo $row['password']; ?>>
+            <input class="input-field" type="password"  placeholder="password" name="password" id="password" value=<?php echo $row['password']; ?> >
+            <i class="far fa-eye-slash fa-eye" id="togglePassword" style="margin-left:-25vw; cursor: pointer;"></i>
           </div>
 
           <div class="input-container">
@@ -88,7 +104,16 @@
         
     
     $(document).ready(function()
-    {
+    {      const togglePassword = document.querySelector('#togglePassword');
+      const password = document.querySelector('#password');
+
+      togglePassword.addEventListener('click', function (e) {
+      // toggle the type attribute
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      // toggle the eye slash icon
+      this.classList.toggle('fa-eye-slash'); })
+
         $("#myform").on('submit',function(e)
         {
             e.preventDefault();
@@ -131,6 +156,8 @@
                   }
 
                 })
+
+
               })
             })
     

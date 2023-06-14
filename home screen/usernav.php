@@ -25,7 +25,7 @@
 </head>
 
 <body>
-<div class="sidebar close">
+<div class="sidebar">
         <!-- ========== Logo ============  -->
         <a href="#" class="logo-box">
             <i class='bx bxl-xing'></i>
@@ -52,7 +52,7 @@
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="#" class="link">
+                    <a href="http://localhost/project/login/nav%20components/items/category.php" class="link">
                         <i class='bx bx-book-alt'></i>
                         <span class="name">Categories</span>
                     </a>
@@ -78,7 +78,7 @@
             <!-- -------- Non Dropdown List Item ------- -->
             <li>
                 <div class="title">
-                    <a href="#" class="link">
+                    <a href="http://localhost/project/login/nav%20components/items/purchasereport.php" class="link">
                         <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="name">Purschase Summary </span>
                     </a>
@@ -93,7 +93,7 @@
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="#" class="link">
+                    <a href="http://localhost/project/login/nav%20components/items/report.php" class="link">
                         <i class='bx bx-extension'></i>
                         <span class="name">Report</span>
                     </a>

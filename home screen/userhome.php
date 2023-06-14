@@ -7,7 +7,11 @@
  $res = $conn->query($sql);
  $row = mysqli_fetch_assoc($res);
  $imageloc=$row['image'];
- echo $imageloc;
+ if(is_null($imageloc))
+ {
+    $imageloc="user_images/user.png";
+ }
+
 
 
 ?>
@@ -39,7 +43,7 @@
 </head>
 
 <body>
-<div class="sidebar close">
+<div class="sidebar">
         <!-- ========== Logo ============  -->
         <a href="#" class="logo-box">
             <i class='bx bxl-xing'></i>
@@ -62,11 +66,26 @@
                     <!-- submenu links here  -->
                 </div>
             </li>
-
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
                     <a href="#" class="link">
+                        <i class='bx bx-collection'></i>
+                        <span class="name">Users</span>
+                    </a>
+                    <i class='bx bxs-chevron-down'></i>
+                </div>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Category</a>
+                    
+                    <a href="http://localhost/project/login/home%20screen/user_info.php" class="link">User Details</a>
+
+                </div>
+            </li>
+            <!-- -------- Dropdown List Item ------- -->
+            <li class="dropdown">
+                <div class="title">
+                    <a href="http://localhost/project/login/nav%20components/items/category.php" class="link">
                         <i class='bx bx-book-alt'></i>
                         <span class="name">Categories</span>
                     </a>
@@ -92,7 +111,7 @@
             <!-- -------- Non Dropdown List Item ------- -->
             <li>
                 <div class="title">
-                    <a href="#" class="link">
+                    <a href="http://localhost/project/login/nav%20components/items/purchasereport.php" class="link">
                         <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="name">Purschase Summary </span>
                     </a>
@@ -107,7 +126,7 @@
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="#" class="link">
+                    <a href="http://localhost/project/login/nav%20components/items/report.php" class="link">
                         <i class='bx bx-extension'></i>
                         <span class="name">Report</span>
                     </a>
@@ -130,16 +149,16 @@
 
     <!-- IMAGE DROPDOWM START-->
        <div class="img-container" >
-            <img src="user.png" class="user-pic" onclick="toggleMenu()">
+       <?php echo '<img src=../'.$imageloc.' '; echo 'class="user-pic" onclick="toggleMenu()">'; ?>
                 <div class="sub-menu-wrap dropdown" id="subMenu">
                     <div class="submenu dropdown-item">
                         <div class="user-info">
-                            <img src="user.png" class="user-pic inside-user">
-                            <h3>USER</h3>
+                        <?php echo '<img src=../'.$imageloc.' ' ; echo'class="user-pic inside-user">
+                            <h3>USER</h3>'; ?>
                         </div>
                        
                         <div class="dropdown-item">
-                            <a href="#" class="sub-menu-link">
+                            <a href="user_info.php" class="sub-menu-link">
                                 <img src="images/profile.png">
                                 <p>Edit Profile</p>
                                 <span>></span>
@@ -184,7 +203,7 @@
     <!--CARDS IN HOME PAGE-->
     <div class="cards">
    
-        <div class="child child-1">
+        <div class="child child-1" onclick="user()">
             <div class="card">
                 <div class="card-image-user">
                     <img src="images/user1.png">
@@ -199,7 +218,7 @@
 
         <!--CARD2 -->
 
-        <div class="child child-2">
+        <div class="child child-2" onclick="category()">
             <div class="card">
                 <div class="card-image-user">
                     <img src="images/categories1.png" class="img-cat">
@@ -214,7 +233,7 @@
 
         <!--CARD3-->
 
-        <div class="child child-3">
+        <div class="child child-3" onclick ="items()">
             <div class="card">
                 <div class="card-image-user">
                     <img src="images/trolley.png" class="image-items">
@@ -229,7 +248,7 @@
 
             <!--CARD-4-->
 
-        <div class="child child-4" id="card4">
+        <div class="child child-4" id="card4" onclick="purchase()">
             <div class="card">
                 <div class="card-image-user">
                     <img src="images/purchasing.png" class="image-summary" height="75px" width="75px">
@@ -243,10 +262,10 @@
         </div>
 
           <!--card 5-->
-        <div class="child">
+        <div class="child" onclick="report()">
             <div class="card">
                 <div class="card-image-user">
-                    <img src="" alt="image loading" class="image-last">
+                    <img src="images/report.png" alt="image loading" class="image-last">
                 </div>
                     <div class="card-content">
                         <div class="card-content-5">
@@ -262,6 +281,35 @@
          </div>
     <!-- Link JS -->
     <script src="assets/js/main.js"></script> 
+    <script>
+        function purchase()
+        {
+            location.href ="http://localhost/project/login/nav%20components/items/purchasereport.php";
+
+        }
+
+        function user()
+        {
+            location.href = "http://localhost/project/login/home%20screen/user_info.php";
+        }
+
+        function items()
+        {
+            location.href= "http://localhost/project/login/nav%20components/items/update.php"
+        }
+        function report()
+        {
+            location.href ="http://localhost/project/login/nav%20components/items/report.php"
+        }
+
+        function category()
+        {
+            location.href = "http://localhost/project/login/nav%20components/items/category.php"
+        }
+
+
+
+    </script>
 </body>
 
 </html>

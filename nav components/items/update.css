@@ -14,36 +14,61 @@
 }
 #table{
     overflow-x: scroll;
+    
 }
 th{
-    background-color: rgb(53, 146, 203);
+    background-color: rgb(33, 168, 252);
     color:white;
+    text-align: center;
+    padding: 10px;
+    align-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border-right: 2px solid white;
+}
+td{
+    font-family: cursive;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    border-right: 1px solid black;
 }
 tbody{
     border:1px solid rgb(53, 146, 203);
 }
 tr:hover{
     font-weight: bold;
+    font-size: medium;
 }
 .edit{
-    background-color: #199319;
+  background-color: #199319;
   color: white;
-  padding: 5px 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-decoration: none;
+  text-align: center;
+  position: relative;
+  margin-bottom: -10vh;
 }
 .delete{
     text-align: center;
+    position: fixed;
 }
 .search{
     width:fit-content;
-    margin-left: 30vw;
+    margin-left: 50vw;
     margin-top: 2vh;
+    
+    scroll-behavior: inherit;
 }
 .search input{
     height: 26px;
     top:60px;
     position:absolute;
-    left:20%;
+    left:40%;
     
 }
 #label{
@@ -52,5 +77,8 @@ tr:hover{
     padding: 5px;
     position: absolute;
     top:60px;
-    left:32%;
+    left:53%;
+}
+#my-data{
+    align-items: center;
 }

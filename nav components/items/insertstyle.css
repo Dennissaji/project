@@ -12,16 +12,18 @@
    margin-top:5vw;
    margin-right: 5%;
    right: 0.5vw;
-   background-color: rgb(69, 174, 255);
+   background-color: rgb(49, 55, 60);
+   margin-top: 16vh;
 }
 .cat{
     margin-top: 20px;
 }
 #submit{
     margin-left: 70vw;
-    background-color: rgb(140, 252, 252);
-    color:grey;
+    background-color: #0d6efd;
+    color:white;
     font-weight: bolder;
+    padding: 10px;
     
 }
 .heading{
@@ -33,6 +35,7 @@
     font-size: x-large;
     display: flexbox;
     top:5.5vh;
+    margin-top: 4vh;
     
 }
 img{
@@ -54,4 +57,33 @@ img{
 #msg{
     background-color: white;
     border: none;
+}
+label{
+    color: white;
+}
+.desc{
+    color: white;
+}
+.img-container{
+    margin-left: 10px;
+}
+#msg{
+    margin-top: 10px;
+    position: absolute;
+    top:0;
+    left:20vw;
+    z-index: 100;
+    margin-left: 20vw;
+}
+.update-btn{
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    margin-top: -10px;
+    margin-left: -5px;
+    font-style: oblique;
+    font-size: medium;
+    font-weight: bolder;
+}
+p{
+    color: white;
 }

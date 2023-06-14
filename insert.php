@@ -13,10 +13,6 @@
   $num=$_POST['num'];
   $image = $_FILES['image'];
 
-  echo($email);
-  echo($name);
-  print_r($image);
-
   $imagefilename = $image['name'];
   print_r($imagefilename);
 
@@ -42,10 +38,9 @@
   { $sql="INSERT INTO `users` (email,username,`password`,designation,`role`,phone,`image`) values ('$email','$name','$pass','$dsgn','$role','$num','$upload_image')";
     $result=mysqli_query($conn,$sql);
    if($result)
-    { $_SESSION['msg']="User Data Entered Successfully";
-      if(isset($_SESSION['msg']))
-       
-       echo 1;
+    { 
+      echo "<script> alert('user regisered successfully waiting for admins approval thanks') </script>";
+      header("Location: login.php");
     }
 }
 ?>

@@ -10,6 +10,10 @@
     
 
 }
+.home{
+    height: 0px;
+    width: 0px;
+}
 .user-pic{
     border-radius: 50%;
     width:20vw;

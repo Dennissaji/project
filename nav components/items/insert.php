@@ -29,7 +29,7 @@ include ('../../home screen/adminnav.php') ?>
   <h> Add New Item</h>
 </div>
 <div class="form-container">
-<form>
+<form id="form">
   <div class="form-row">
     <div class="form-group col-md-4">
       <label for="productname">Product Name</label>
@@ -101,16 +101,20 @@ include ('../../home screen/adminnav.php') ?>
       <input type="number" class="form-control wp" id="wp" name="wp" placeholder="Enter Warranty Period">
     </div>
 
-    
+    <div class="form-group img-container">
+      <label>Select Image </label>
+      <input type="file" name="file" id="upload_file"/>
+    </div>
+
     <div class="form-group col-md-6">
-        <p> Enter the Seller Details </p>
+        <p class="desc"> Enter the Seller Details </p>
       <textarea name="sd" class="sd" id="sd" rows="10" cols="30">
         
       </textarea>
     </div>
     
     <div class="form-group col-md-6">
-      <p> Enter the Specifications </p>
+      <p class="desc"> Enter the Specifications </p>
       <textarea name="specs" class="specs" id="specs" rows="10" cols="30">
         
       </textarea>

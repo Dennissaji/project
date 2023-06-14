@@ -3,7 +3,7 @@
 
 include 'config.php';
 $search_value=$_POST["search"];
-$sql="select * from `items` where `product name` like '%{$search_value}%' or `location` LIKE '{$search_value}%' or `category` LIKE '{$search_value}%' ";
+$sql="select * from `items` where `product name` like '%{$search_value}%' or `location` LIKE '{$search_value}%' or `category` LIKE '{$search_value}%' or `product code` LIKE '{$search_value}%' ";
 $result=mysqli_query($conn,$sql);
 ?>
 <!-- Latest compiled and minified CSS -->

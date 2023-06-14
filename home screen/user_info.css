@@ -1,14 +1,17 @@
 body{
-    background: rgba(239, 247, 231, 0.902);
+    background: rgba(235, 255, 215, 0.902);
 }
 .form{
     width: 45vw;
     height: 105vh;
     background-color: rgb(255, 255, 255);
-    margin-top: 5vh;
     margin-left: 25vw;
     box-shadow: 10px 10px 10px 10px #888888;
     border: 5px solid rgba(239, 247, 231, 0.902);
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 30vw;
+    
 }
 * {box-sizing: border-box;}
 
@@ -101,4 +104,15 @@ input{
   text-align: center;
   text-decoration: none;
   display: inline-block;
+}
+#togglePassword{
+  padding-top: 10px;
+  position: absolute;
+  left:66vw;
+}
+
+#form{
+  position: absolute;
+  display: block;
+
 }
