@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
     session_start();
-    include('connect.php');
+    include('config.php');
     $email=$_SESSION['email'];
     $sql="SELECT * FROM `users` where email='$email'";
     $res = $conn->query($sql);
@@ -49,18 +49,18 @@
         
         <div class="input-container">
             <i class="fa fa-user icon"></i>
-            <input class="input-field" type="text" id="username" placeholder="Username" name="username" value=<?php echo $row['username']; ?> >
+            <input class="input-field" type="text" id="username" placeholder="Username" name="username" value="<?php echo $row['username']; ?>" >
           </div>
 
           <div class="input-container">
             <i class="fa fa-key icon"></i>
-            <input class="input-field" type="password"  placeholder="password" name="password" id="password" value=<?php echo $row['password']; ?> >
+            <input class="input-field" type="password"  placeholder="password" name="password" id="password" value="<?php echo $row['password']; ?>" >
             <i class="far fa-eye-slash fa-eye" id="togglePassword" style="margin-left:-25vw; cursor: pointer;"></i>
           </div>
 
           <div class="input-container">
             <i class="fa-solid fa-user-tie icon"></i>
-            <input class="input-field" type="text" id="dsgn" placeholder="Desigantion" name="dsgn" value=<?php echo $row['designation']; ?> >
+            <input class="input-field" type="text" id="dsgn" placeholder="Desigantion" name="dsgn" value="<?php echo $row['designation']; ?>" >
           </div>
 
           <div class="input-container">
@@ -137,7 +137,7 @@
                       if (user) {
                         const newPassword = password;
                         updatePassword(user, newPassword).then(() => {
-                          alert("firebase password updated successfully");
+                          alert("information updated successfully");
                           }).catch((error) => {
                             alert(error);
                             alert("fire base error");

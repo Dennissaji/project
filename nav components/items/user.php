@@ -1,5 +1,5 @@
 <?php
- include('../../home screen/adminnav.php');
+ include('.adminnav.php');
  include('config.php');
  $query="select * from `users`";
  $result=mysqli_query($conn,$query);

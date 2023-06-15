@@ -1,5 +1,5 @@
 <?php 
- include('connect.php');
+ include('config.php');
  session_start();
  
  if( isset($_POST['username']) || isset($_POST['dsgn']) || isset($_POST['phone']) || isset($_POST['password']))

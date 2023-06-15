@@ -1,0 +1,22 @@
+.table-container{
+    width:70vw;
+    margin-left: 20vw;
+    margin-top: 15vh;
+}
+th{
+    background-color: rgb(45, 44, 44);
+    color: white;
+}
+table,th,td{
+    border: 1px solid black;
+    padding: 5px;
+    font-size: medium;
+    font-style: inherit;
+}
+#approve{
+    background-color: rgb(16, 29, 16);
+    color: white;
+    padding: 5px;
+    border:none;
+    font-size: medium;
+}

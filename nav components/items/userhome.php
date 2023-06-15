@@ -2,11 +2,17 @@
  session_start();
  $email=$_SESSION['email'];
 
-     include('../connect.php');
-     $sql="SELECT * FROM `users` where email='$email' ";
-     $res = $conn->query($sql);
-     $row = mysqli_fetch_assoc($res);
-     $imageloc=$row['image'];
+ include('./config.php');
+ $sql="SELECT * FROM `users` where email='$email' ";
+ $res = $conn->query($sql);
+ $row = mysqli_fetch_assoc($res);
+ $imageloc=$row['image'];
+ if(is_null($imageloc))
+ {
+    $imageloc="../user_images/user.png";
+ }
+
+
 
 ?>
 
@@ -23,7 +29,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <!-- Styles  -->
     <link rel="shortcut icon" href="assets/img/kxp_fav.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Home Page</title>
 <meta charset="utf-8">
    <!--bootstrap CDN-->
@@ -49,39 +55,37 @@
             <!-- -------- Non Dropdown List Item ------- -->
             <li>
                 <div class="title">
-                    <a href="#" class="link">
+                    <a href="./userhome.php" class="link">
                         <i class='bx bx-grid-alt'></i>
                         <span class="name">Dashboard</span>
                     </a>
                     <!-- <i class='bx bxs-chevron-down'></i> -->
                 </div>
                 <div class="submenu">
-                    <a href="#" class="link submenu-title">Dashboard</a>
+                    <a href="./userhome.php" class="link submenu-title">Dashboard</a>
                     <!-- submenu links here  -->
                 </div>
             </li>
-
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="#" class="link">
+                    <a href="./user_info.css" class="link">
                         <i class='bx bx-collection'></i>
                         <span class="name">Users</span>
                     </a>
                     <i class='bx bxs-chevron-down'></i>
                 </div>
                 <div class="submenu">
-                    <a href="#" class="link submenu-title">Category</a>
+                    <a href="./category.php" class="link submenu-title">Category</a>
                     
-                    <a href="http://localhost/project/login/home%20screen/user_info.php" class="link">User Details</a>
+                    <a href="./user_info.php" class="link">User Details</a>
 
                 </div>
             </li>
-
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="http://localhost/project/login/nav%20components/items/category.php" class="link">
+                    <a href="./category.php" class="link">
                         <i class='bx bx-book-alt'></i>
                         <span class="name">Categories</span>
                     </a>
@@ -99,9 +103,7 @@
                     <i class='bx bxs-chevron-down'></i>
                 </div>
                 <div class="submenu">
-                    <a href="../nav components/items/insert.php" class="link">Add New Item</a>
-                    <a href="../nav components/items/update.php" class="link">Update and Delete</a>
-                    <a href="../nav components/items/itemsdisplay.php" class="link">Display</a>
+                    <a href="./itemsdisplay.php" class="link">Display</a>
                 </div>
             </li>
 
@@ -109,7 +111,7 @@
             <!-- -------- Non Dropdown List Item ------- -->
             <li>
                 <div class="title">
-                    <a href="http://localhost/project/login/nav%20components/items/purchasereport.php" class="link">
+                    <a href="./purchasereport.php" class="link">
                         <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="name">Purschase Summary </span>
                     </a>
@@ -124,7 +126,7 @@
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="http://localhost/project/login/nav%20components/items/report.php" class="link">
+                    <a href="./report.php" class="link">
                         <i class='bx bx-extension'></i>
                         <span class="name">Report</span>
                     </a>
@@ -145,32 +147,18 @@
     </section>
 
 
-
-    <!-- Message Icon -->
-     
-    <div class="msg-icon">
-        <a href="../pending.php"><img  class="msg-img"src="email.png"></a>
-    </div>
-
-
-
-
-
-
-    <!--Message Icon-->
-
     <!-- IMAGE DROPDOWM START-->
        <div class="img-container" >
-            <?php echo '<img src=../'.$imageloc.' '; echo 'class="user-pic" onclick="toggleMenu()">'; ?>
+       <?php echo '<img src=../'.$imageloc.' '; echo 'class="user-pic" onclick="toggleMenu()">'; ?>
                 <div class="sub-menu-wrap dropdown" id="subMenu">
                     <div class="submenu dropdown-item">
                         <div class="user-info">
-                           <?php echo '<img src=../'.$imageloc.' ' ; echo'class="user-pic inside-user">
+                        <?php echo '<img src=../'.$imageloc.' ' ; echo'class="user-pic inside-user">
                             <h3>USER</h3>'; ?>
                         </div>
                        
                         <div class="dropdown-item">
-                            <a href="user_info.php" class="sub-menu-link">
+                            <a href="./user_info.php" class="sub-menu-link">
                                 <img src="images/profile.png">
                                 <p>Edit Profile</p>
                                 <span>></span>
@@ -221,7 +209,7 @@
                     <img src="images/user1.png">
                 </div>
                 <div class="card-content">
-                    <div class="card-content-1 "><a href="" class="user-link">USER</a>
+                    <div class="card-content-1 "><a href="" class="user-link">USERS</a>
                     </div>    
                 </div>
                 </div>
@@ -245,7 +233,7 @@
 
         <!--CARD3-->
 
-        <div class="child child-3" onclick="items()">
+        <div class="child child-3" onclick ="items()">
             <div class="card">
                 <div class="card-image-user">
                     <img src="images/trolley.png" class="image-items">
@@ -292,31 +280,31 @@
      
          </div>
     <!-- Link JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script> 
     <script>
         function purchase()
         {
-            location.href ="http://localhost/project/login/nav%20components/items/purchasereport.php";
+            location.href ="./purchasereport.php";
 
         }
 
         function user()
         {
-            location.href = "http://localhost/project/login/home%20screen/user_info.php";
+            location.href = "./user_info.php";
         }
 
         function items()
         {
-            location.href= "http://localhost/project/login/nav%20components/items/update.php"
+            location.href= "./itemsdisplay.php"
         }
         function report()
         {
-            location.href ="http://localhost/project/login/nav%20components/items/report.php"
+            location.href ="./report.php"
         }
 
         function category()
         {
-            location.href = "http://localhost/project/login/nav%20components/items/category.php"
+            location.href = "./category.php"
         }
 
 

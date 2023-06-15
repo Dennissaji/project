@@ -9,10 +9,10 @@
   <?php
   session_start();
   if($_SESSION['role']=='admin')
-  {include ('../../home screen/adminnav.php');}
+  {include ('./adminnav.php');}
   else
   {
-     include ('../../home screen/usernav.php');
+     include ('./usernav.php');
   }
 
 

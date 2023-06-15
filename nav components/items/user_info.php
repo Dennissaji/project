@@ -2,7 +2,7 @@
 <html lang="en">
   <?php
     session_start();
-    include('connect.php');
+    include('config.php');
     $email=$_SESSION['email'];
     $sql="SELECT * FROM `users` where email='$email'";
     $res = $conn->query($sql);

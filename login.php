@@ -141,10 +141,10 @@
       { 
         if(data==1)
         {
-            window.location.replace('./home screen/adminhome.php');
+            window.location.replace('./nav components/items/adminhome.php');
         }
         else{
-            window.location.replace('./home screen/userhome.php');
+            window.location.replace('./nav components/items/userhome.php');
         }
       }
     })

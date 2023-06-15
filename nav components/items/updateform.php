@@ -5,7 +5,7 @@ session_start();
 $id=$_GET['id'];
 $_SESSION["id"]=$id;
 include 'config.php';
-include ('../../home screen/adminnav.php');
+include ('./adminnav.php');
 if(!isset($_POST['submit']))
 {
 $sql="select * from `items` where id='$id'";

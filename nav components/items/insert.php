@@ -1,6 +1,6 @@
 <?php 
 include 'config.php';
-include ('../../home screen/adminnav.php') ?>
+include ('./adminnav.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -99,11 +99,6 @@ include ('../../home screen/adminnav.php') ?>
     <div class="form-group col-md-4">
       <label for="wp">Warranty Period</label>
       <input type="number" class="form-control wp" id="wp" name="wp" placeholder="Enter Warranty Period">
-    </div>
-
-    <div class="form-group img-container">
-      <label>Select Image </label>
-      <input type="file" name="file" id="upload_file"/>
     </div>
 
     <div class="form-group col-md-6">

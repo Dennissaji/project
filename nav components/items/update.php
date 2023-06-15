@@ -1,4 +1,4 @@
-<?php include ('../../home screen/adminnav.php');?>
+<?php include ('./adminnav.php');?>
 <!DOCTYPE html>
 <html>
 <head>

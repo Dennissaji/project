@@ -37,7 +37,7 @@
             <!-- -------- Non Dropdown List Item ------- -->
             <li>
                 <div class="title">
-                    <a href="http://localhost/project/login/home%20screen/adminhome.php" class="link">
+                    <a href="./adminhome.php" class="link">
                         <i class='bx bx-grid-alt'></i>
                         <span class="name">Dashboard</span>
                     </a>
@@ -61,7 +61,7 @@
                 <div class="submenu">
                     <a href="#" class="link submenu-title">Category</a>
                     
-                    <a href="http://localhost/project/login/home%20screen/user_info.php" class="link">User Info</a>
+                    <a href="./user_info.php" class="link">User Info</a>
 
                 </div>
             </li>
@@ -69,7 +69,7 @@
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="http://localhost/project/login/nav%20components/items/category.php" class="link">
+                    <a href="./category.php" class="link">
                         <i class='bx bx-book-alt'></i>
                         <span class="name">Categories</span>
                     </a>
@@ -87,9 +87,9 @@
                     <i class='bx bxs-chevron-down'></i>
                 </div>
                 <div class="submenu">
-                    <a href="http://localhost/project/login/nav%20components/items/insert.php" class="link">Add New Item</a>
-                    <a href="http://localhost/project/login/nav%20components/items/update.php" class="link">Update and Delete</a>
-                    <a href="http://localhost/project/login/nav%20components/items/itemsdisplay.php" class="link">Display</a>
+                    <a href="./insert.php" class="link">Add New Item</a>
+                    <a href="./update.php" class="link">Update and Delete</a>
+                    <a href="./itemsdisplay.php" class="link">Display</a>
                 </div>
             </li>
 
@@ -97,7 +97,7 @@
             <!-- -------- Non Dropdown List Item ------- -->
             <li>
                 <div class="title">
-                    <a href="http://localhost/project/login/nav%20components/items/purchasereport.php" class="link">
+                    <a href="./purchasereport.php" class="link">
                         <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="name">Purschase Summary </span>
                     </a>
@@ -112,7 +112,7 @@
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="http://localhost/project/login/nav%20components/items/report.php" class="link">
+                    <a href="./report.php" class="link">
                         <i class='bx bx-extension'></i>
                         <span class="name">Report</span>
                     </a>
