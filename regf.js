@@ -1,6 +1,7 @@
 
 $(document).ready(function()
 {
+
     $("#form").validate({
             rules: {
                 username: {
@@ -18,7 +19,8 @@ $(document).ready(function()
                 },
                 email: {
                     required: true,
-                    email: true
+                    email: true,
+                    pattern : /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(ug.cusat.ac.in)$/
                 },
                 num:{
                     required:true,
@@ -46,7 +48,8 @@ $(document).ready(function()
                 },
                 email:{
                     required:"please enter a email id ",
-                    email:"invalid email id"
+                    email:"invalid email id",
+                    pattern:"please enter a valid email id"
                 },
                 num:{
                     required:"please enter a number",

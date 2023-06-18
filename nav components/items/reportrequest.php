@@ -22,8 +22,9 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">id</th>
+      
       <th scope="col">item</th>
+      <th scope="col">item count</th>
       <th scope="col">category</th>
       <th scope="col">Description</th>
       <th scope="col">date of request</th>
@@ -47,13 +48,39 @@
                 {
                     $("#table-body").html(data);
                 
-                    $("button").on('click',function(e)
+                    $("#approve").on('click',function(e)
                   { const id = $(this).attr("data-id")
                     e.preventDefault();
                     console.log("button clicked");
                     console.log(id);
                     $.ajax({
                     url:"requestapproval.php",
+                    method:"POST",
+                    data:{id:id},
+                    success:function(data)
+                    {
+                        alert(data);
+
+                        $.ajax({
+
+                          url:"requestfetch.php",
+                success:function(data)
+                {
+                  $("#table-body").html(data);
+                }
+                          
+                        })
+                    }
+                  })
+                    }),
+                 
+                    $("#reject").on('click',function(e)
+                  { const id = $(this).attr("data-id")
+                    e.preventDefault();
+                    console.log("button clicked");
+                    console.log(id);
+                    $.ajax({
+                    url:"request_decline.php",
                     method:"POST",
                     data:{id:id},
                     success:function(data)

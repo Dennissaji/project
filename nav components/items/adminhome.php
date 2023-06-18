@@ -57,6 +57,7 @@
                 </div>
                 <div class="submenu">
                     <a href="#" class="link submenu-title">Dashboard</a>
+                    <a href="http://localhost/project/login/nav%20components/items/my_request.php" >My Requests</a>
                     <!-- submenu links here  -->
                 </div>
             </li>
@@ -214,7 +215,6 @@
 
     <!--CARDS IN HOME PAGE-->
     <div class="cards">
-   
         <div class="child child-1" onclick="user()">
             <div class="card">
                 <div class="card-image-user">

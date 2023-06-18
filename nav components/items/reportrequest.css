@@ -20,3 +20,11 @@ table,th,td{
     border:none;
     font-size: medium;
 }
+#reject{
+    background-color: rgb(16, 29, 16);
+    color: white;
+    padding: 5px;
+    border:none;
+    font-size: medium;
+    margin-top: 5px;
+}

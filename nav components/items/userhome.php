@@ -199,10 +199,12 @@
 
 
     <!--IMAGE DROP DOWN ENDS-->
+    
+    
 
     <!--CARDS IN HOME PAGE-->
     <div class="cards">
-   
+
         <div class="child child-1" onclick="user()">
             <div class="card">
                 <div class="card-image-user">

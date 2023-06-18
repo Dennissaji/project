@@ -8,8 +8,9 @@
  $date = $_POST['date'];
  $desc = $_POST['desc'];
  $item = $_POST['item'];
+ $item_count = $_POST['count'];
 
- $sql = "INSERT INTO `complaint` (`email`, `phone`, `category`,`item`, `date`, `desc`) VALUES ('$email','$number','$category','$item','$date','$desc');";
+ $sql = "INSERT INTO `complaint` (`email`, `phone`, `category`,`item`,`count`, `date`, `desc`) VALUES ('$email','$number','$category','$item','$item_count','$date','$desc');";
  $result = $conn->query($sql);
 
  if($result)
