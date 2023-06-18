@@ -125,12 +125,17 @@
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="./report.php" class="link">
+                    
                         <i class='bx bx-extension'></i>
                         <span class="name">Report</span>
-                    </a>
-                    
+                        <i class='bx bxs-chevron-down'></i>
+                    </a>     
                 </div>
+                <div class="submenu">
+                    <a href="./report.php" class="link">Request Items</a>
+                    <a href="./my_request.php" class="link">My Requests<span id="req_count"></span></a>
+                    
+                </div>    
             </li>
 
 
@@ -151,6 +156,7 @@
      
     <div class="msg-icon">
         <a href="./pending.php"><img  class="msg-img"src="email.png"></a>
+        <span id="user_req"></span>
     </div>
 
 
@@ -318,6 +324,36 @@
         {
             location.href = "./category.php"
         }
+
+        $(document).ready(function()
+        {
+            $.ajax({
+            url:"my_request_count.php",
+            type:"POST",
+            success:function(data)
+             { if(data>0)
+                {
+                 $("#req_count").html(data);
+                }
+                else{
+                    $("#req_count").css('display','none')
+                }
+             }
+            })
+            $.ajax({
+            url:"user_req_count.php",
+            type:"POST",
+            success:function(data)
+             { if(data>0)
+                {
+                 $("#user_req").html(data);
+                }
+                else{
+                    $("#user_req").css('display','none')
+                }
+             }
+            })
+        })
 
 
 

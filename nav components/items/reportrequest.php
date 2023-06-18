@@ -48,7 +48,7 @@
                 {
                     $("#table-body").html(data);
                 
-                    $("#approve").on('click',function(e)
+                    $(".approve").on('click',function(e)
                   { const id = $(this).attr("data-id")
                     e.preventDefault();
                     console.log("button clicked");
@@ -74,7 +74,7 @@
                   })
                     }),
                  
-                    $("#reject").on('click',function(e)
+                    $(".reject").on('click',function(e)
                   { const id = $(this).attr("data-id")
                     e.preventDefault();
                     console.log("button clicked");

@@ -21,8 +21,8 @@
      <td><?php echo $data['date'] ?>  </td>
      <td><?php echo $data['email'] ?>  </td>
      <td><?php echo $data['phone'] ?>  </td>
-     <td><button id="approve" data-id = "<?php echo $data['id'] ?>"> Approve</button>
-     <button id="reject" data-id = "<?php echo $data['id'] ?>">Reject</button></td>
+     <td><button id="approve" class="approve" data-id = "<?php echo $data['id'] ?>"> Approve</button>
+     <button id="reject" class="reject" data-id = "<?php echo $data['id'] ?>">Reject</button></td>
   </tr>
  <?php
   }}

@@ -21,9 +21,18 @@
      <td><?php echo $data['category'] ?>  </td>
      <td><?php echo $data['desc'] ?>  </td>
      <td><?php echo $data['date'] ?>  </td>
-     <td><?php echo $data['status'] ?>  </td>   
+     <td><?php echo $data['status'] ?>  </td>
+     <?php 
+         if($data['status']=='pending')
+      {?>   
      <td><button id="edit" class="edit" data-id = "<?php echo $data['id'] ?>"> EDIT</button></td>
-  </tr>
+     <?php
+   } 
+   else{
+      ?>
+            <td><?php echo "your request was approved on ",$data['approval_details']," please contact admin for any change" ?></td>
+      <?php } ?>
+   </tr>
  <?php
   }}
  ?>
