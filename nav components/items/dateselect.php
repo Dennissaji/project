@@ -14,11 +14,11 @@
             while($row = mysqli_fetch_array($result))
             { ?>
                <tr>
-                <td><?php echo $row['date of purchase']; ?> </td>
-                <td><?php echo $row['product name']; ?>  </td>
-                <td><?php echo $row['serial no']; ?>  </td>
-                <td><?php echo $row['count']; ?>  </td>
-                <td><?php echo $row['price']; ?>  </td>
+                <td style = "padding:10px;border:1px solid black;" ><?php echo $row['date of purchase']; ?> </td>
+                <td style = "padding:10px;border:1px solid black;" ><?php echo $row['product name']; ?>  </td>
+                <td style = "padding:10px;border:1px solid black;" ><?php echo $row['serial no']; ?>  </td>
+                <td style = "padding:10px;border:1px solid black;" ><?php echo $row['count']; ?>  </td>
+                <td style = "padding:10px;border:1px solid black;" ><?php echo $row['price']; ?>  </td>
               </tr>
            <?php }
 

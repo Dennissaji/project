@@ -71,7 +71,10 @@ if(isset($_SESSION['msg']))
 
     <div class="form-group">
       <label for="role">Role: </label>
-      <input type="text" name="role" class="form-control" name="role" id="role" placeholder="enter  role">
+      <select name="role" class="form-control" id="role">
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+      </select>
     </div>
 
     <div class="form-group">

@@ -27,60 +27,62 @@
   <div class="container">
     <form>
     <div class="form-container">
-        <label for="date" id="startdate_label">From:</label>
+      <span class="dates">
+        <label for="date" id="startdate_label" >From:</label>
         <input type="date" name="date" id="start_date">
-        <label for="date" id="enddate_label">To:</label>
+        <label for="date" id="enddate_label" >To:</label>
         <input type="date" name="date" id="end_date">
+        </span>
         <input type="button" value="submit" id="submit">  
-
+      
     </div>
 </form>
 
-    <div class="table-box">
-    <table>
+    <div class="table-box" id="table1" >
+    <table class="tb" style = "padding:10px;border:1px solid black,border-collapse: collapse;;">
         <h3>Payment summary</h3>
         <thead>
           <tr>
-            <th>Category</th>
-            <th>Amount</th>
+            <th style = "padding:10px;border:1px solid black;">Category</th>
+            <th style = "padding:10px;border:1px solid black;">Amount</th>
           </tr>
         </thead>
         <tbody>
 
           <tr>
-            <td>Staffroom</td>
-            <td id="Staffroom"> </td>
+            <td style = "padding:10px;border:1px solid black;">Staffroom</td>
+            <td id="Staffroom" style = "padding:10px;border:1px solid black;"> </td>
           </tr>
 
           <tr>
-            <td>Classroom</td>
-            <td id="classroom"> </td>
+            <td style = "padding:10px;border:1px solid black;">Classroom</td>
+            <td id="classroom" style = "padding:10px;border:1px solid black;"> </td>
           </tr>
 
           <tr>
-            <td>Laboratory</td>
-            <td id="lab"> </td>
+            <td style = "padding:10px;border:1px solid black;">Laboratory</td>
+            <td id="lab" style = "padding:10px;border:1px solid black;"> </td>
           </tr>
 
           <tr>
-            <td >Total Amount         </td>
-            <td id="total"></td>
+            <td style = "padding:10px;border:1px solid black;" >Total Amount         </td>
+            <td id="total" style = "padding:10px;border:1px solid black;"></td>
           </tr>
 
         </tbody>
       </table>
     </div>
 
-  <div class="table-box2">
-    <table>
+  <div class="table-box2" id="table2">
+    <table class="tb" style = "padding:10px;border:1px solid black;" >
         <h3>Purchase summary</h3>
         <thead>
-          <tr>
-            <th>Date</th>
-            <th>Name</th>
-            <th>Serial.no</th>
-            <th>Count</th>
-            <th>Price</th>
+          <tr style = "padding:10px;border:1px solid black;" >
+            <th style = "padding:10px;border:1px solid black;" >Date</th>
+            <th style = "padding:10px;border:1px solid black;" >Name</th>
+            <th style = "padding:10px;border:1px solid black;" >Serial.no</th>
+            <th style = "padding:10px;border:1px solid black;" >Count</th>
+            <th style = "padding:10px;border:1px solid black;" >Price</th>
 
           </tr>
         </thead >
@@ -140,10 +142,24 @@
       })
 
       $("#print_btn").click(function(e)
-      {
-        window.print();
+      {var pr1= $("#table1").html();
+        var pr2= $("#table2").html();
+        var pr3 = $("#start_date").val();
+        var pr4 =$("#end_date").val();
+        console.log(pr3)
+        var WinPrint = window.open('./print.html', '', 'margin-left:20vw,padding:10px');
+        WinPrint.document.write("<h style='font-size:35px,margin-left:100px;'> <b>Purchase Report</b> </h>");
+        WinPrint.document.write("<p> Start Date: </p>"+pr3);
+        WinPrint.document.write("<p> End Date: </p>"+pr4);
+        WinPrint.document.write(pr1);
+        WinPrint.document.write(pr2);
+        WinPrint.document.close();
+        WinPrint.focus();
+        WinPrint.print();
+        WinPrint.close();
       })
       
     })
+    
   </script>
   </html>
