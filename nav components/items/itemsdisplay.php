@@ -49,6 +49,7 @@
       <th scope="col">Product Code</th>
       <th scope="col">Category</th>
       <th scope="col">Location</th>
+      <th scope="col">Fund</th>
       <th scope="col">Count</th>
       <th scope="col">Price</th>
       <th scope="col">Date of Purchase</th>

@@ -63,6 +63,8 @@ include ('./adminnav.php') ?>
     </div>
 
     
+
+    
     <div class="form-group col-md-4">
     <label for="count"> Count </label>
     <input type="number" class="count form-control" id="count" name="count" placeholder="enter the count" required />
@@ -101,14 +103,19 @@ include ('./adminnav.php') ?>
       <input type="number" class="form-control wp" id="wp" name="wp" placeholder="Enter Warranty Period">
     </div>
 
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
+      <label for="fund">Fund Category</label>
+      <input type="text" class="form-control" id="fund" name="fund" placeholder="Enter Fund Type"/>
+    </div>
+
+    <div class="form-group col-md-4">
         <p class="desc"> Enter the Seller Details </p>
       <textarea name="sd" class="sd" id="sd" rows="10" cols="30">
         
       </textarea>
     </div>
     
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
       <p class="desc"> Enter the Specifications </p>
       <textarea name="specs" class="specs" id="specs" rows="10" cols="30">
         

@@ -18,6 +18,7 @@ $cat=$row['category'];
 $loc=$row['location'];
 $price=$row['price'];
 $count=$row['count'];
+$fund=$row['fund'];
 $dop=$row['date of purchase'];
 $wp=$row['warranty period'];
 $sd=$row['seller details'];
@@ -114,15 +115,19 @@ $specs=$row['specs'];
       <input type="number" class="form-control wp" id="wp" value="<?php echo $wp; ?>" name="wp" placeholder="Enter Warranty Period">
     </div>
 
-    
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
+      <label for="fund">Fund Category</label>
+      <input type="text" class="form-control" id="fund" name="fund" value="<?php echo $fund; ?>" placeholder="Enter Fund Type"/>
+    </div>
+
+    <div class="form-group col-md-4">
         <p id="text-area"> Enter the Seller Details </p>
       <textarea name="sd" class="sd" id="sd" rows="10" cols="30">
         <?php echo $sd; ?>
       </textarea>
     </div>
     
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-4">
       <p id="text-area"> Enter the Specifications </p>
       <textarea name="specs" class="specs" id="specs" rows="10" cols="30">
         <?php echo $specs; ?>

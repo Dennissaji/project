@@ -46,12 +46,21 @@
           </td>
         </tr>
         <tr>
-                         <td>3</td>
-                <td>Laboratory</td>
-                <td>
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                </td>
+             <td>3</td>
+             <td>Laboratory</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+        </tr>
+
+        <tr>
+             <td>4</td>
+             <td> Others</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
         </tr>
       </tbody>
     </table>

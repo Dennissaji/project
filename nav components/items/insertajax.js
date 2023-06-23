@@ -19,7 +19,7 @@ $(document).ready(function()
         processData:false,
         success:function(data)
         {
-          alert(data);
+          
           $('#msg').html("<h>data insert successfully</h>").fadeIn('slow') //also show a success message 
           $("#msg").css("background-color", "#cbf7d6");
           $("#msg").css("border", "1px solid green");
