@@ -35,6 +35,8 @@
     <input type="text" name="item" id="item" placeholder="Item">
     <label for = "count">Item Count</label>
     <input type="text" name="count" id="count" placeholder="item count" required>
+    <label for = "count">Department</label>
+    <input type="text" name="dept" id="dept" placeholder="name of department" required>
     <label for="Item_description">Item description</label>
     <textarea name="Item_description" row="20" id="item_description" placeholder="Item_description"></textarea><br><br>
     <br><br>
@@ -56,11 +58,12 @@
                     const date=$("#date").val();
                     const desc=$("#item_description").val();
                     const count=$("#count").val();
+                    const dept = $("#dept").val();
                     
                     $.ajax({
                         url:'reportb.php',
                         type:"POST",
-                        data:{email:email,number:number,category:category,date:date,item:item,desc:desc,count:count},
+                        data:{email:email,number:number,category:category,date:date,item:item,desc:desc,count:count,dept:dept},
                         success:function(data)
                         {
                             alert(data)

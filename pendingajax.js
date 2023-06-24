@@ -1,30 +1,34 @@
 $(document).ready(function()
 {
- $(document).on("click",".reject",function()
+ $(".reject").click(function(e)
  {
-    if(confirm("Do you realy Want to REJECT the record ?"))
-    {
-    console.log("button clicked");
-    var email=$(this).data("email");
-    var element=this;
+    
+  e.preventDefault();
+  console.log("button clicked");
+  var email=$(this).data("email");
+  var element=this;
 
-    $.ajax({
-      url: "ajax pending.php",
-      type: "POST",
-      data:{email: email},
-      success: function(data)
-      { echo(data);
-        if(data==1)
-        {
-            $(element).closest("tr").fadeOut();
-        }
-        else{
-                 alert("data cant be removed");
-        }
+  $.ajax({
+    url: "ajax_pending.php",
+    type: "POST",
+    data:{email: email},
+    success: function(data)
+    { alert("1")
+      if(data==1)
+      {
+          $(element).closest("tr").fadeOut();
       }
-    })
-}
+      else{
+               alert("data cant be removed");
+      }
+    }
+  })
+
  })
 
 
 })
+
+
+
+

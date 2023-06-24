@@ -58,27 +58,32 @@ tr:hover{
     position: fixed;
 }
 .search{
-    width:fit-content;
-    margin-left: 50vw;
-    margin-top: 2vh;
     
+    margin-top: 2vh;
     scroll-behavior: inherit;
+    
+    margin-top: 10vh;
+    margin-left: 25vw;
+    height: 4.9vh;
 }
 .search input{
-    height: 26px;
-    top:60px;
-    position:absolute;
-    left:40%;
-    
+  height: 4.9vh;
+  margin: 0px;
 }
-#label{
-    background-color:rgb(53, 146, 203) ;
-    color: white;
-    padding: 5px;
-    position: absolute;
-    top:60px;
-    left:53%;
-}
+
 #my-data{
     align-items: center;
 }
+.searchButton {
+    width: 40px;
+    height: 4.9vh;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+    
+    margin-left: -0.3vw;
+  }

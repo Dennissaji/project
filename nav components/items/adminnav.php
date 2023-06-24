@@ -21,7 +21,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!--css link -->
   <link rel="stylesheet" href="styleuser.css">
-  
+  <link rel="stylesheet" href="css/stylecards.css">
 </head>
 
 
@@ -120,7 +120,8 @@
                 </div>
                 <div class="submenu">
                     <a href="./report.php" class="link">Request Items</a>
-                    <a href="./my_request.php" class="link">My Requests</a><span> 5</span>                 
+                    <a href="./my_request.php" class="link">My Requests<span id="req_count"></span></a>               
+                    <a href="./reportrequest.php" class="link">Requests For Approval<span id="approval_req_count"></span></a>
                 </div>
             </li>
 
@@ -136,5 +137,38 @@
         </div>
     </section>
     <script src="assets/js/main.js"></script>
+    <script>
+                $(document).ready(function()
+        {
+            $.ajax({
+            url:"my_request_count.php",
+            type:"POST",
+            success:function(data)
+             { if(data>0)
+                {
+                 $("#req_count").html(data);
+                }
+                else{
+                    $("#req_count").css('display','none')
+                }
+             }
+            })
+            $.ajax({
+            url:"approval_req_count.php",
+            type:"POST",
+            success:function(data)
+             { if(data>0)
+                {
+                 $("#approval_req_count").html(data);
+                }
+                else{
+                    $("#approval_req_count").css('display','none')
+                }
+             }
+            })
+        })
+
+
+    </script>
 
 </html>

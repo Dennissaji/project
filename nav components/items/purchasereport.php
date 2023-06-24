@@ -60,8 +60,13 @@
           </tr>
 
           <tr>
-            <td style = "padding:10px;border:1px solid black;">Laboratory</td>
+            <td style = "padding:10px;border:1px solid black;">Lab</td>
             <td id="lab" style = "padding:10px;border:1px solid black;"> </td>
+          </tr>
+
+          <tr>
+            <td style = "padding:10px;border:1px solid black;">Others</td>
+            <td id="others" style = "padding:10px;border:1px solid black;"> </td>
           </tr>
 
           <tr>
@@ -122,7 +127,8 @@
                   $("#total").html(myarray[1]+" /-")
                   $("#classroom").html(myarray[2] + "/-")
                   $("#lab").html(myarray[3] + "/-")
-                  $("#staffroom").html(myarray[4] + "/-")
+                  $("#others").html(myarray[4]+ "/-")
+                  $("#staffroom").html(myarray[5] + "/-")
               }
             })
         }

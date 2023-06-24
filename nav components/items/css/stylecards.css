@@ -125,11 +125,11 @@
   text-align: center;
   display: block;
 }
-#req_count{
+#req_count,#approval_req_count{
   margin-left: 16px;
   background-color: red;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 50%;

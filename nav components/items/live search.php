@@ -3,7 +3,7 @@
 
 include 'config.php';
 $search_value=$_POST["search"];
-$sql="select * from `items` where `product name` like '%{$search_value}%' or `location` LIKE '{$search_value}%' or `category` LIKE '{$search_value}%' or `product code` LIKE '{$search_value}%' ";
+$sql="select * from `items` where `product name` like '%{$search_value}%' or `location` LIKE '{$search_value}%' or `category` LIKE '{$search_value}%' or `product code` LIKE '{$search_value}%'or `fund` LIKE '{$search_value}%' ";
 $result=mysqli_query($conn,$sql);
 ?>
 <!-- Latest compiled and minified CSS -->
@@ -26,6 +26,7 @@ if(mysqli_num_rows($result)>0)
       <th scope="col">Product Code</th>
       <th scope="col">Location</th>
       <th scope="col">Category</th>
+      <th scope="col">Fund</th>
       <th scope="col">Count</th>
       <th scope="col">Price</th>
       <th scope="col">Date Of Purchase</th>
@@ -47,6 +48,7 @@ if(mysqli_num_rows($result)>0)
                     <td><?php echo $row['product code'] ?>  </td>
                     <td><?php echo $row['location'] ?>  </td>
                     <td><?php echo $row['category'] ?> </td>
+                    <td><?php echo $row['fund'] ?> </td>
                     <td><?php echo $row['count'] ?>  </td>
                     <td><?php echo $row['price'] ?>  </td>
                     <td><?php echo $row['date of purchase'] ?>  </td>

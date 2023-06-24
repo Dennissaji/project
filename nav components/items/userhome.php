@@ -126,17 +126,22 @@
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="./report.php" class="link">
+                    
                         <i class='bx bx-extension'></i>
                         <span class="name">Report</span>
-                    </a>
-                    
+                        <i class='bx bxs-chevron-down'></i>
+                    </a>          
+                </div>
+                <div class="submenu">
+                    <a href="./report.php" class="link">Request Items</a>
+                    <a href="./my_request.php" class="link">My Requests<span id="req_count"></span></a>               
                 </div>
             </li>
 
 
         </ul>
     </div>
+
 
     <!-- ============= Home Section =============== -->
     <section class="home">
@@ -189,6 +194,7 @@
             {
                 subMenu.classList.toggle("open-menu");
             }
+
         </script>
 
 
@@ -308,6 +314,27 @@
         {
             location.href = "./category.php"
         }
+
+        <script>
+                $(document).ready(function()
+        {
+            $.ajax({
+            url:"my_request_count.php",
+            type:"POST",
+            success:function(data)
+             { if(data>0)
+                {
+                 $("#req_count").html(data);
+                }
+                else{
+                    $("#req_count").css('display','none')
+                }
+             }
+            })
+        })
+
+
+    </script>
 
 
 

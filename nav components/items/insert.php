@@ -59,6 +59,7 @@ include ('./adminnav.php') ?>
         <option value="lab">Lab</option>
         <option value="class">Class Room</option>
         <option value="staffroom">Staff Room</option>
+        <option value="others">Others</optiion>
     </select>
     </div>
 
@@ -87,6 +88,7 @@ include ('./adminnav.php') ?>
         <option value="cs-a">CS-A</option>
         <option value="cs-b">CS-B</option>
         <option value="project lab">Project Lab</option>
+        <option value="not applicable">Not Applicable</option>
       </select>
     </div>
 

@@ -134,7 +134,7 @@
                 <div class="submenu">
                     <a href="./report.php" class="link">Request Items</a>
                     <a href="./my_request.php" class="link">My Requests<span id="req_count"></span></a>
-                    
+                    <a href="./reportrequest.php" class="link">Requests For Approval<span id="approval_req_count"></span></a>
                 </div>    
             </li>
 
@@ -353,10 +353,20 @@
                 }
              }
             })
+            $.ajax({
+            url:"approval_req_count.php",
+            type:"POST",
+            success:function(data)
+             { if(data>0)
+                {
+                 $("#approval_req_count").html(data);
+                }
+                else{
+                    $("#approval_req_count").css('display','none')
+                }
+             }
+            })
         })
-
-
-
     </script>
 </body>
 

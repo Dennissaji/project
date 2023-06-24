@@ -10,12 +10,15 @@
 <script src="delete ajax.js" ></script>
 <script src="search.js"></script>
 <link rel="stylesheet" href="update.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.6.4.js" crossorigin="anonymous"></script>
     <div class="search">
-      <label id="label">Search </label>
       <input type="text" id="search" placeholder="Search.." autocomplete="off">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
     </div> 
     <div id="table-data">
     </div>
