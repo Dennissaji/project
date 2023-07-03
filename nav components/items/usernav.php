@@ -52,7 +52,7 @@
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="./category.php" class="link">
+                    <a href="./card_category.php" class="link">
                         <i class='bx bx-book-alt'></i>
                         <span class="name">Categories</span>
                     </a>

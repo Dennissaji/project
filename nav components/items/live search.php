@@ -41,22 +41,22 @@ if(mysqli_num_rows($result)>0)
         <?php
             while($row=mysqli_fetch_assoc($result))
             { ?>
-                <tr>
-                    <td><?php echo $row['id'] ?> </td>
-                    <td><?php echo $row['product name'] ?>  </td>
-                    <td><?php echo $row['serial no'] ?>  </td>
-                    <td><?php echo $row['product code'] ?>  </td>
-                    <td><?php echo $row['location'] ?>  </td>
-                    <td><?php echo $row['category'] ?> </td>
-                    <td><?php echo $row['fund'] ?> </td>
-                    <td><?php echo $row['count'] ?>  </td>
-                    <td><?php echo $row['price'] ?>  </td>
-                    <td><?php echo $row['date of purchase'] ?>  </td>
-                    <td><?php echo $row['warranty period'] ?>  </td>
-                    <td><?php echo $row['seller details'] ?>  </td>
-                    <td><?php echo $row['specs'] ?> </td>
-                    <td><a href='updateform.php?id=<?php echo "$id" ?>' class="edit">Edit </a></td>
-                    <td><button class='delete-btn' data-id='<?php echo "$id"; ?>' class="delete">Delete </button></td>
+                <tr class="tr">
+                    <td class="td"><?php echo $row['id'] ?> </td>
+                    <td class="td"><?php echo $row['product name'] ?>  </td>
+                    <td class="td"><?php echo $row['serial no'] ?>  </td>
+                    <td class="td"><?php echo $row['product code'] ?>  </td>
+                    <td class="td"><?php echo $row['location'] ?>  </td>
+                    <td class="td"><?php echo $row['category'] ?> </td>
+                    <td class="td"><?php echo $row['fund'] ?> </td>
+                    <td class="td"><?php echo $row['count'] ?>  </td>
+                    <td class="td"><?php echo $row['price'] ?>  </td>
+                    <td class="td"><?php echo $row['date of purchase'] ?>  </td>
+                    <td class="td"><?php echo $row['warranty period'] ?>  </td>
+                    <td class="td"><?php echo $row['seller details'] ?>  </td>
+                    <td class="td"><?php echo $row['specs'] ?> </td>
+                    <td class="td"><a href='updateform.php?id=<?php echo "$id" ?>' class="edit">Edit </a></td>
+                    <td class="td"><button class='delete-btn' data-id='<?php echo "$id"; ?>' class="delete">Delete </button></td>
                 </tr>
             <?php
             }

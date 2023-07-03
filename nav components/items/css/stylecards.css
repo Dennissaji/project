@@ -17,7 +17,7 @@
   display:inline-flex;
   flex-wrap: wrap;
   border: none;
-  background-image: radial-gradient( circle farthest-corner at 6.4% 9.8%,  rgba(88,242,174,1) 0%, rgba(0,130,240,1) 97.9% );
+  background-image: radial-gradient( circle farthest-corner at 6.4% 9.8%,  rgb(16, 30, 57) 0%, rgba(0,130,240,1) 97.9% );
   
 }
 .card {
@@ -103,10 +103,7 @@
 .img-cat{
   padding-top: 5%;
 }
-.card-content-2{
-  
-  
-}
+
 .cat-link{
   display:block
 }

@@ -76,7 +76,7 @@
                     <i class='bx bxs-chevron-down'></i>
                 </div>
                 <div class="submenu">
-                    <a href="./category.php" class="link submenu-title">Category</a>
+                   
                     
                     <a href="./user_info.php" class="link">User Details</a>
 
@@ -85,7 +85,7 @@
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="./category.php" class="link">
+                    <a href="./card_category.php" class="link">
                         <i class='bx bx-book-alt'></i>
                         <span class="name">Categories</span>
                     </a>

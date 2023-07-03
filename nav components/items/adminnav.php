@@ -25,7 +25,7 @@
 </head>
 
 
-<div class="sidebar ">
+<div class="sidebar " style="background-color:#1f363d;" id="nav-container">
         <!-- ========== Logo ============  -->
         <a href="#" class="logo-box">
             <i class='bx bxl-xing'></i>
@@ -69,7 +69,7 @@
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="./category.php" class="link">
+                    <a href="./card_category.php" class="link">
                         <i class='bx bx-book-alt'></i>
                         <span class="name">Categories</span>
                     </a>
@@ -166,6 +166,14 @@
                 }
              }
             })
+            
+                if($(window).width() < 900) {
+                    $("#nav-container").addClass('close')
+                    
+                }else{
+                 $("#nav-container").removeClass('close')
+                }
+                
         })
 
 

@@ -6,6 +6,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+   *{
+    *{
+      font-family: "Roboto";
+    }
+   }
+  </style>
   <?php
   session_start();
   if($_SESSION['role']=='admin')
@@ -14,32 +32,36 @@
   {
      include ('./usernav.php');
   }
-
-
 ?>
 </head>
 <body id="body">
-  <header class = "header"> 
-    <h1 id="report">Purchase Report</h1>
-    <button style="font-size:18px" id="print_btn">print <i class="fa fa-print"></i></button>
-
+  <div class="container-fluid">
+  <header class = "header">
+    <div class="row row0"> 
+      <div class="col-md-4 heading"><h1 id="report">Purchase Report</h1></div>
+      <div class="col-md-2 print_btn"><button style="font-size:18px" id="print_btn">print <i class="fa fa-print"></i></button></div>
+    </div>
 </header>
   <div class="container">
     <form>
-    <div class="form-container">
+    <div class="form-container row">
       <span class="dates">
-        <label for="date" id="startdate_label" >From:</label>
-        <input type="date" name="date" id="start_date">
-        <label for="date" id="enddate_label" >To:</label>
-        <input type="date" name="date" id="end_date">
+        <div class="col-md-3 start_date">
+          <label for="date" id="startdate_label" >From:</label>
+          <input type="date" name="date" id="start_date">
+        </div>
+        <div class="col-md-3 end_date">
+          <label for="date" id="enddate_label" >To:</label>
+          <input type="date" name="date" id="end_date">
+        </div>
         </span>
-        <input type="button" value="submit" id="submit">  
+        <div class="col-md-1 submit_btn"><input type="button" value="submit" id="submit"> </div> 
       
     </div>
 </form>
 
-    <div class="table-box" id="table1" >
-    <table class="tb" style = "padding:10px;border:1px solid black,border-collapse: collapse;;">
+    <div class="table-box table-responsive" id="table1" >
+    <table class="tb  table-hover" style = "padding:10px;border:1px solid black,border-collapse: collapse;;">
         <h3>Payment summary</h3>
         <thead>
           <tr>
@@ -78,16 +100,16 @@
       </table>
     </div>
 
-  <div class="table-box2" id="table2">
-    <table class="tb" style = "padding:10px;border:1px solid black;" >
+  <div class="table-box2 table-responsive" id="table2">
+    <table class="tb  table-hover" style = "padding:10px;border:1px solid black;" >
         <h3>Purchase summary</h3>
         <thead>
           <tr style = "padding:10px;border:1px solid black;" >
-            <th style = "padding:10px;border:1px solid black;" >Date</th>
-            <th style = "padding:10px;border:1px solid black;" >Name</th>
-            <th style = "padding:10px;border:1px solid black;" >Serial.no</th>
-            <th style = "padding:10px;border:1px solid black;" >Count</th>
-            <th style = "padding:10px;border:1px solid black;" >Price</th>
+            <th scope="col" style = "padding:10px;border:1px solid black;" >Date</th>
+            <th scope="col" style = "padding:10px;border:1px solid black;" >Name</th>
+            <th scope="col" style = "padding:10px;border:1px solid black;" >Serial.no</th>
+            <th scope="col" style = "padding:10px;border:1px solid black;" >Count</th>
+            <th scope="col" style = "padding:10px;border:1px solid black;" >Price</th>
 
           </tr>
         </thead >
@@ -95,6 +117,7 @@
           
         </tbody>
       </table>
+    </div>
     </div>
   </body>
   <script >
@@ -166,6 +189,13 @@
       })
       
     })
+    $(window).on('resize', function() {
+    if($(window).width() < 900) {
+        $("#nav-container").addClass('close')
+    }else{
+      $("#nav-container").removeClass('close')
+    }
+})
     
   </script>
   </html>

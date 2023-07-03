@@ -11,21 +11,37 @@
 <script src="search.js"></script>
 <link rel="stylesheet" href="update.css?v=<?php echo time(); ?>">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <script src="https://code.jquery.com/jquery-3.6.4.js" crossorigin="anonymous"></script>
-    <div class="search">
-      <input type="text" id="search" placeholder="Search.." autocomplete="off">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button>
-    </div> 
+    
+    <div class="boxContainer">
+        <table class="elementscontainer">
+            <tr>
+                <td>
+                    <input type="text" id="search" class="search" placeholder="Search.." autocomplete="off">
+                </td>
+                <td>
+                    <a href="#"><i class="material-icons">search</i></a>
+                </td>
+            </tr>
+
+        </table>
+    </div>
     <div id="table-data">
     </div>
-    <div class="table-container">
+    <div class="table-container table-responsive">
     <table class="table table-striped table-dark" id="table">
     <thead>
-        <tr>
+        <tr class="trow">
             <th scope="col">id</th>
             <th scope="col">Product Name</th>
             <th scope="col">Serial No</th>
@@ -68,8 +84,16 @@
     })
   }
 loaddata();
-})
 
+        })
+
+    $(window).on('resize', function() {
+    if($(window).width() < 900) {
+        $("#nav-container").addClass('close')
+    }else{
+      $("#nav-container").removeClass('close')
+    }
+})
 
 </script>
 </body>

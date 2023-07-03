@@ -18,7 +18,7 @@
     <title>Document</title>
 </head>
 <body>
-<div class="table-container">
+<div class="table-container table-responsive">
 <table class="table table-hover">
   <thead>
     <tr>
@@ -103,6 +103,14 @@
                   
               } 
             })
+            $(window).on('resize', function() {
+              if($(window).width() < 900) {
+              $("#nav-container").addClass('close')
+              }
+              else{
+                $("#nav-container").removeClass('close')
+                }
+                })
           }
           
         );

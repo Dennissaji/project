@@ -25,7 +25,7 @@ session_start();
     <title>My Requests</title>
 </head>
 <body>
-<div class="table-container">
+<div class="table-container table-responsive">
 <table class="table table-hover">
   <thead>
     <tr>
@@ -65,6 +65,15 @@ session_start();
                             })
                         }
                     })
+                    $(window).on('resize', function() {
+              if($(window).width() < 900) {
+              $("#nav-container").addClass('close')
+              }
+              else{
+                $("#nav-container").removeClass('close')
+                }
+                })
+          
                 })
 
   </script>

@@ -18,7 +18,7 @@
 <div id="form">
    
     <form>
-     <h2 id="head">Request Form </h2> <br>
+     <h2 id="head" align="center">Request Form </h2> <br>
      <label for="email">Email </label>
      <input type="email" name="email" id="email" placeholder="enter your email" required>
      <label for="number">Phone Number </label>
@@ -36,7 +36,12 @@
     <label for = "count">Item Count</label>
     <input type="text" name="count" id="count" placeholder="item count" required>
     <label for = "count">Department</label>
-    <input type="text" name="dept" id="dept" placeholder="name of department" required>
+    <select name="dept" id="dept" placeholder="name of department" required>
+        <option value="cs">Computer Science And Engineering(CSE)</option>
+        <option value="ec">Electronics and Communication(EC)</option>
+        <option value="ce">Civil Engineering(CE)</option>
+        <option value="it">Information Technology(IT)</option>
+    </select>
     <label for="Item_description">Item description</label>
     <textarea name="Item_description" row="20" id="item_description" placeholder="Item_description"></textarea><br><br>
     <br><br>
@@ -72,6 +77,12 @@
                 })
             }
         )
-
+        $(window).on('resize', function() {
+    if($(window).width() < 900) {
+        $("#nav-container").addClass('close')
+    }else{
+      $("#nav-container").removeClass('close')
+    }
+})
   </script>
 </html>

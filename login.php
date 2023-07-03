@@ -138,12 +138,13 @@
       type: "POST",
       data:{email: email},
       success: function(data)
-      { 
+      { alert(data);
         if(data==1)
         {
             window.location.replace('./nav components/items/adminhome.php');
         }
-        else{
+        if(data==0)
+        {
             window.location.replace('./nav components/items/userhome.php');
         }
       }
