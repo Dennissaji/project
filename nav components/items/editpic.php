@@ -1,3 +1,4 @@
+<div class="editpic-form">
 <form enctype="multipart/form-data" id="form">
     <div class="image"></div>
     <div class="button-block">
@@ -10,7 +11,7 @@
         </div>
     </div>
 </form>
-
+</div>
 <script type="text/javascript">
     $(document).ready(function()
     {

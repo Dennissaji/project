@@ -102,7 +102,7 @@
                 <div class="submenu">
                     <a href="./insert.php" class="link">Add New Item</a>
                     <a href="./update.php" class="link">Update and Delete</a>
-                    <a href="./itemsdisplay.php" class="link">Display</a>
+                    <a href="./product_filter.php" class="link">Display</a>
                 </div>
             </li>
 

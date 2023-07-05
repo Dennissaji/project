@@ -156,6 +156,13 @@
                   }
 
                 })
+                $(window).on('resize', function() {
+    if($(window).width() < 900) {
+        $("#nav-container").addClass('close')
+    }else{
+      $("#nav-container").removeClass('close')
+    }
+})
 
 
               })

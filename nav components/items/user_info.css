@@ -1,16 +1,18 @@
-body{
-    background: rgba(235, 255, 215, 0.902);
+.body{
+    min-width: max-content;
+    min-height:927px
 }
 .form{
-    width: 45vw;
-    height: 105vh;
-    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    height: fit-content;
+    background-color:#CADBC8;
     margin-left: 25vw;
     box-shadow: 10px 10px 10px 10px #888888;
     border: 5px solid rgba(239, 247, 231, 0.902);
     position: absolute;
-    margin-top: 10vh;
+    margin-top: 14vh;
     margin-left: 30vw;
+    border-radius: 20px;
     
 }
 * {box-sizing: border-box;}
@@ -22,19 +24,21 @@ body{
   margin-bottom: 30px;
   margin-right: 1vw;
   margin-left: 2vw;
+  border-radius: 50px;
 
 }
 
 input{
     border-left: none;
     border: 1px solid black;
+    border-radius: 5px;
 }
 
 /* Style the form icons */
 .icon {
   padding: 10px;
-  background: rgba(239, 247, 231, 0.902);
-  color:black;
+  background:#1f363d;
+  color:white;
   min-width: 50px;
   text-align: center;
 }
@@ -44,6 +48,7 @@ input{
   width: 100%;
   padding: 10px;
   outline: none;
+  background-color: whitesmoke;
 }
 
 .input-field:focus {
@@ -51,15 +56,15 @@ input{
 }
 
 .cont1{
-    padding-top: 6vh;
+    margin-top: 7vh;
 }
 .circular--square 
 { border-radius: 50%;
-  width: fit-content;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   margin-left: 17vw;
-  margin-top: 10vh; }
-
+   margin-top: 5vh;  
+}
 .image-container{
   
   height: 10vh;
@@ -70,11 +75,12 @@ input{
     margin-left: 20vw;
 }
 .editbtn{
-    background-color:rgba(239, 247, 231, 0.902) ;
+    background-color:#1f363d ;
     padding: 10px;
     text-decoration: solid;
     border: none;
     font-weight: bold;
+    color: white;
 }
 .submitbtn{
     background-color: green;
@@ -83,23 +89,24 @@ input{
     border: none;
     font-size: 15px;
     cursor: pointer;
+    margin-bottom: 7vh;
 
 }
 .row{
     margin-left: 18vw;
 }
-
 .cont1-edit{
-    margin-top: 30vh;
+  margin-top: 20vh;
 }
+
 
 .edit-picture{
     margin-left: 19vw;
-    margin-top: 28vh;
+    margin-top: 20vh;
 }
 .button{
   background-color:rgba(239, 247, 231, 0.902);
-  color:black;
+  color:white;
   padding: 10px 10px;
   text-align: center;
   text-decoration: none;
@@ -112,7 +119,68 @@ input{
 }
 
 #form{
-  position: absolute;
+  position: relative;
   display: block;
-
+}
+#submit{
+  background-color:#1f363d;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+}
+.editpic-form{
+  margin-bottom: 2vh;
+  position: relative;
+}
+.file-btn{
+  background-color:whitesmoke;
+  width: max-content;
+}
+.image{
+  background-color:rgb(53, 38, 38);
+  width: max-content;
+}
+.button-block{
+  width:max-content;
+}
+.editpicbutton{
+  background-color:#1f363d;
+}
+#file{
+  width: max-content;
+  background-color: #D0F5BE;
+}
+@media only screen and (max-width: 600px) {
+  .circular--square{
+    margin-left: 24vw;
+  }
+  .btn-container{
+    margin-left: 10vw;
+  }
+  .editpic-form{
+    margin-bottom: 2vh;
+    margin-left: 20vw;
+  }
+  .editpicbutton{
+    margin-left: 20vw;
+    margin-top: 3vh;
+  }
+  .edit-picture{
+    margin-left: 5vw;
+  }
+  .form{
+    width: 100%;
+  }
+  .input-field{
+    width: max-content;
+  }
+  .input-container{
+    margin-left: 20vw;
+  }
+  .editbtn{
+    margin-left: 16vw;
+  }
+  .submitbtn{
+    margin-left: 28vw;
+  }
 }

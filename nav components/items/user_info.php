@@ -12,9 +12,17 @@
     {
        $imageloc="user_images/user.png";
     }
-    
-    
+  
   ?>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +45,7 @@
 
 ?>
   </head>
-<body>
+<body class="body">
     
      <div class="form" id="result">
 
@@ -98,6 +106,14 @@
          
          
        });
+       $(window).on('resize', function() {
+    if($(window).width() < 900) {
+        $("#nav-container").addClass('close')
+    }else{
+      $("#nav-container").removeClass('close')
+    }
+})
+      
 
     });
 
@@ -110,6 +126,7 @@
     password.setAttribute('type', type);
     // toggle the eye slash icon
     this.classList.toggle('fa-eye-slash');
+    
 });
   </script>
 </html>

@@ -135,6 +135,3 @@ include ('./adminnav.php') ?>
 </body>
 
 </html>
-
-
-

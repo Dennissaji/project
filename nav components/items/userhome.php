@@ -103,7 +103,7 @@
                     <i class='bx bxs-chevron-down'></i>
                 </div>
                 <div class="submenu">
-                    <a href="./itemsdisplay.php" class="link">Display</a>
+                    <a href="./product_filter.php" class="link">Display</a>
                 </div>
             </li>
 
