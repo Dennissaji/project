@@ -25,7 +25,6 @@ include ('./adminnav.php') ?>
   
 </div>
 <div class="heading">
-  <img src="add.png">
   <h> Add New Item</h>
 </div>
 <div class="form-container">

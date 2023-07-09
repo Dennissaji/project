@@ -36,6 +36,7 @@
 .navbar-brand{
     color: white;
     font-size: xx-large;
+    margin-left: 25vw;
 }
 .container{
     margin-top: 15vh;
@@ -45,6 +46,9 @@
     height: fit-content;
     width: 80vw;
     height: 70vh;
+}
+span{
+    color: black;
 }
 .card-text{
     margin-left: 1.5vw;

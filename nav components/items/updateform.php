@@ -37,7 +37,7 @@ $specs=$row['specs'];
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="insertstyle.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="updateform.css?v=<?php echo time(); ?>">
 <script src="https://code.jquery.com/jquery-3.6.4.js" crossorigin="anonymous"></script>
 
 
@@ -143,5 +143,8 @@ $specs=$row['specs'];
 </div>
 
 </body>
+<script>
+  
 
+</script>
 </html>

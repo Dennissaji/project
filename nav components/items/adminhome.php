@@ -117,7 +117,7 @@
                     <!-- <i class='bx bxs-chevron-down'></i> -->
                 </div>
                 <div class="submenu">
-                    <a href="#" class="link submenu-title">Chart</a>
+                    <a href="#" class="link submenu-title">Purchase Summary</a>
                     <!-- submenu links here  -->
                 </div>
             </li>
@@ -136,6 +136,21 @@
                     <a href="./my_request.php" class="link">My Requests<span id="req_count"></span></a>
                     <a href="./reportrequest.php" class="link">Requests For Approval<span id="approval_req_count"></span></a>
                 </div>    
+            </li>
+
+             <!-- -------- Non Dropdown List Item ------- -->
+             <li>
+                <div class="title">
+                    <a href="./purchase_list.php" class="link">
+                        <i class='bx bx-pie-chart-alt-2'></i>
+                        <span class="name">Purschase List </span>
+                    </a>
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                </div>
+                <div class="submenu">
+                    <a href="#" class="link submenu-title">Purchase List</a>
+                    <!-- submenu links here  -->
+                </div>
             </li>
 
 
@@ -322,7 +337,7 @@
 
         function category()
         {
-            location.href = "./category.php"
+            location.href = "./card_category.php"
         }
 
         $(document).ready(function()

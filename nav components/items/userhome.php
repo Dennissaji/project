@@ -312,7 +312,7 @@
 
         function category()
         {
-            location.href = "./category.php"
+            location.href = "./card_category.php"
         }
 
         <script>
