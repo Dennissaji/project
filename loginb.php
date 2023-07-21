@@ -14,6 +14,7 @@ if(true)
   $res = $conn->query($sql);
   $num=mysqli_num_rows($res);
   $row=mysqli_fetch_array($res);
+  $_SESSION['dsgn'] = $row['designation'];
   if($num==1) // user valid redirect to home
   {   $_SESSION['email']=$email;
       $_SESSION['status']="login successful";

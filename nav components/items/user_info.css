@@ -98,6 +98,9 @@ input{
 .cont1-edit{
   margin-top: 20vh;
 }
+#myform{
+  width:300px;
+}
 
 
 .edit-picture{

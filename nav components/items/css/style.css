@@ -56,7 +56,7 @@ footer {
     margin-left: 15vw;
 }
 .row1{
-    width: 60vw;
+    width: fit-content;
     margin-top: 2.5vh;
     margin-right: 2vw;
     height: fit-content;

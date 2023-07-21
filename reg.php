@@ -66,7 +66,10 @@ if(isset($_SESSION['msg']))
 
     <div class="form-group">
       <label for="dsgn">designation</label>
-      <input type="text" name="dsgn" class="form-control" id="dsgn" placeholder="enter  designation" name="dsgn">
+      <select name="dsgn" class="form-control" id="dsgn">
+        <option value="staff">Staff</option>
+        <option value="student">Student</option>
+      </select>
     </div>
 
     <div class="form-group">

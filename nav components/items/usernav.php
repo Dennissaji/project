@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
 
+ $email=$_SESSION['email'];
+ $dsgn=$_SESSION['dsgn'];
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,11 +73,32 @@
                     </a>
                     <i class='bx bxs-chevron-down'></i>
                 </div>
-                <div class="submenu">
-                    <a href="./product_filter.php" class="link">Display</a>
-                </div>
-            </li>
+                
+                <?php
+                    if($dsgn=="staff")
+                    {?>
+                      
+                        <div class="submenu">
+                            <a href="./insert.php" class="link">Add New Item</a>
+                        </div>
 
+                        <div class="submenu">
+                            <a href="./update.php" class="link">Update and Delete</a>
+                        </div>
+                        
+                        <div class="submenu">
+                            <a href="./product_filter.php" class="link">Display</a>
+                        </div> 
+
+                    <?php }
+                    else
+                    {?> 
+                      <div class="submenu">
+                        <a href="./product_filter.php" class="link">Display</a>
+                      </div> 
+                      
+                   <?php } ?>
+            </li>
 
             <!-- -------- Non Dropdown List Item ------- -->
             <li>

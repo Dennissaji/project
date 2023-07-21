@@ -1,6 +1,7 @@
 <?php // checking user logged in or not
  session_start();
  $email=$_SESSION['email'];
+ $dsgn=$_SESSION['dsgn'];
 
  include('./config.php');
  $sql="SELECT * FROM `users` where email='$email' ";
@@ -9,7 +10,7 @@
  $imageloc=$row['image'];
  if(is_null($imageloc))
  {
-    $imageloc="../user_images/user.png";
+    $imageloc="user_images/user.png";
  }
 
 
@@ -69,7 +70,7 @@
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
                 <div class="title">
-                    <a href="./user_info.css" class="link">
+                    <a href="./user_info.php" class="link">
                         <i class='bx bx-collection'></i>
                         <span class="name">Users</span>
                     </a>
@@ -102,9 +103,31 @@
                     </a>
                     <i class='bx bxs-chevron-down'></i>
                 </div>
-                <div class="submenu">
-                    <a href="./product_filter.php" class="link">Display</a>
-                </div>
+                
+                <?php
+                    if($dsgn=="staff")
+                    {?>
+                      
+                        <div class="submenu">
+                            <a href="./insert.php" class="link">Add New Item</a>
+                        </div>
+
+                        <div class="submenu">
+                            <a href="./update.php" class="link">Update and Delete</a>
+                        </div>
+                        
+                        <div class="submenu">
+                            <a href="./product_filter.php" class="link">Display</a>
+                        </div> 
+
+                    <?php }
+                    else
+                    {?> 
+                      <div class="submenu">
+                        <a href="./product_filter.php" class="link">Display</a>
+                      </div> 
+                      
+                   <?php } ?>
             </li>
 
 
@@ -315,7 +338,7 @@
             location.href = "./card_category.php"
         }
 
-        <script>
+        
                 $(document).ready(function()
         {
             $.ajax({
@@ -334,7 +357,7 @@
         })
 
 
-    </script>
+    
 
 
 

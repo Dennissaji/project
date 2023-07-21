@@ -144,7 +144,7 @@
             window.location.replace('./nav components/items/adminhome.php');
         }
         if(data==0)
-        {
+        {   
             window.location.replace('./nav components/items/userhome.php');
         }
       }

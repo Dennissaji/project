@@ -60,7 +60,7 @@
 
           <div class="input-container">
             <i class="fa-solid fa-user-tie icon"></i>
-            <input class="input-field" type="text" id="dsgn" placeholder="Desigantion" name="dsgn" value="<?php echo $row['designation']; ?>" >
+            <input class="input-field" type="text" id="dsgn" placeholder="Desigantion" name="dsgn" value="<?php echo $row['designation']; ?>" disabled>
           </div>
 
           <div class="input-container">
