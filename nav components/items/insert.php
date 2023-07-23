@@ -1,6 +1,12 @@
-<?php 
-include 'config.php';
-include ('./adminnav.php') ?>
+<?php
+ session_start();
+ if($_SESSION['role']=='admin')
+ {include ('./adminnav.php');}
+ else
+ {
+    include ('./usernav.php');
+ }
+ ?>
 <!DOCTYPE html>
 <html>
 <head>

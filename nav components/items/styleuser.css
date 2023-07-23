@@ -10,6 +10,14 @@
     
 
 }
+.msg-icon{
+    color: white;
+}
+.date-container{
+    margin-left: 65vw;
+    margin-top: 5vh;
+    
+}
 .home{
     height: 0px;
     width: 0px;
@@ -18,6 +26,12 @@
     border-radius: 50%;
     width:20vw;
     margin-right: 10vw;
+    height: 60px;
+}
+.heading_container{
+    margin-left: 45vw;
+    font-size: large;
+    color: whitesmoke;
 }
 .inside-user{
     width: 75px;

@@ -29,7 +29,7 @@
 </head>
 
 <body>
-<div class="sidebar">
+<div class="sidebar" style= "background-color:#1f363d">
         <!-- ========== Logo ============  -->
         <a href="#" class="logo-box">
             <i class='bx bxl-xing'></i>

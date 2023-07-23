@@ -36,8 +36,35 @@
   <link rel="stylesheet" href="css/stylecards.css">
 </head>
 
-<body>
-<div class="sidebar">
+<body style="background-color:#ffff"><!--style="background-image: url('bgk.jpg');background-size: 50%;">-->
+   
+<nav class="navbar navbar-light" style="background-color:#088395; height: 78px;">
+<div class="date-container">
+    <span id="currentDateTime" class="ml-auto" style="color:white; text-align: right;"></span>
+</div>
+</nav>
+
+<script>
+  // Function to update the current date and time
+  function updateDateTime() {
+    var now = new Date();
+    var dateTimeElement = document.getElementById('currentDateTime');
+    
+    // Format the date and time without seconds
+    var formattedDateTime = now.toLocaleString([], { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' });
+    
+    dateTimeElement.innerHTML = formattedDateTime;
+  }
+
+  // Update the date and time initially
+  updateDateTime();
+
+  // Update the date and time every minute (60000 milliseconds)
+  setInterval(updateDateTime, 60000);
+</script>
+
+
+<div class="sidebar" style="background-color:#1f363d">
         <!-- ========== Logo ============  -->
         <a href="#" class="logo-box">
             <i class='bx bxl-xing'></i>
@@ -61,6 +88,9 @@
                     <!-- submenu links here  -->
                 </div>
             </li>
+
+            <!-- -------- Dropdown List Item ------- -->
+
 
             <!-- -------- Dropdown List Item ------- -->
             <li class="dropdown">
@@ -158,14 +188,14 @@
     </div>
 
     <!-- ============= Home Section =============== -->
-    <section class="home">
-        <div class="toggle-sidebar">
-            <i class='bx bx-menu'></i>-
-            <div class="text">INVENTORY MANAGEMENT</div>
-        </div>
-    </section>
-
-
+    <section class="home" style="position: relative;">
+   
+   <div class="toggle-sidebar" style="position: absolute; bottom: 19px; left: -10px; color: white;">
+     <i class="bx bx-menu" style="color: white;"></i>-
+     <div class="text" style="color: white;left: 100px; font-size: 18px;">INVENTORY MANAGEMENT</div>
+   </div>
+ </section>
+ 
 
     <!-- Message Icon -->
      
@@ -228,13 +258,8 @@
 
 
 
-
-
-
-
     <!--IMAGE DROP DOWN ENDS-->
 
-    <!--CARDS IN HOME PAGE-->
     <div class="cards">
         <div class="child child-1" onclick="user()">
             <div class="card">

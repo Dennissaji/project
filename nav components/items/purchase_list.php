@@ -24,13 +24,21 @@ else
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PrintArea/2.4.1/jquery.PrintArea.min.js"></script>
     <link rel="stylesheet" href="purchase_list.css"/>
     <title>Document</title>
 
 </head>
+<nav class="navbar navbar-light" style="background-color:#088395; height: 78px;">
+<div class="heading_container">
+  <h class="header">Purchase List</h>
+</div>
+</nav>
 <body>
+
+<div class="print_btn"><button class="print" id="print">print</button></div>
 <div class=" table-responsive">
-<table class="table table-striped align-middle">
+<table class="table table-striped align-middle" id="table">
   <thead>
     <tr>
       
@@ -60,7 +68,15 @@ else
             {
                $("#t-body").html(data);
             }
+        }),
+        
+              $("#print").click(function()
+              {
+                $("#table").printArea()
+              })
         })
-    })
+
+        
+    
 </script>
 </html>

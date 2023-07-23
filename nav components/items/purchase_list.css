@@ -8,7 +8,25 @@ th{
 .table-responsive{
     margin-left: 20vw;
     width: 70vw;
-    margin-top: 15vh;
+    margin-top: 2vh;
+}
+.header{
+    font-size: 35px;
+    font-weight:bold
+}
+.print_btn{
+    margin-left: 85vw;
+    margin-top: 5vh;
+}
+.print{
+    padding: 7px;
+    background-color: #3c94cf;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+.heading_container{
+    margin-top: 5px;
 }
 body{
     overflow: hidden;
