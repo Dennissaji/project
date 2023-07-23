@@ -10,8 +10,7 @@
  top:10vh;
  overflow-y: hidden;
  position: relative;
- width: 80%;
- border-radius: 20px;
+ width: 73%;
 }
 .table{
     margin-right: 1%;
@@ -53,8 +52,9 @@
     margin-left: 40px;
     margin-top: 8px;
 }
+
 th{
-    background-color:#40916c;
+    background-color:#088395;
     color:white;
     text-align: center;
     padding: 10px;

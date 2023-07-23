@@ -57,6 +57,9 @@
                         <div class="forgot">
                             <small><a href="passwordreset.php">Forgot Password?</a></small>
                         </div>
+                        <div class="report">
+                            <a href="http://localhost/project/login/nav%20components/ww.html" target="_blank">Report Issue</a>
+                        </div>
                     </div>
                     <div class="input-group mb-3">
                         <input type="submit" id ="submit" name="submit" value="Login" class="btn btn-lg btn-primary w-100 fs-6">

@@ -155,6 +155,9 @@
             </li>
 
 
+            <?php
+            if($dsgn=="staff")
+            {?>
             <!-- -------- Non Dropdown List Item ------- -->
             <li>
                 <div class="title">
@@ -169,8 +172,12 @@
                     <!-- submenu links here  -->
                 </div>
             </li>
+            <?php }?>
+
 
             <!-- -------- Dropdown List Item ------- -->
+            <?php if($dsgn=="staff")
+                    {?>
             <li class="dropdown">
                 <div class="title">
                     
@@ -180,10 +187,12 @@
                     </a>          
                 </div>
                 <div class="submenu">
-                    <a href="./report.php" class="link">Request Items</a>
+        
+                    <a href="./report.php" class="link">Request Items</a> 
                     <a href="./my_request.php" class="link">My Requests<span id="req_count"></span></a>               
                 </div>
             </li>
+            <?php }?>
 
 
         </ul>
