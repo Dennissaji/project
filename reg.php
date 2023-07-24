@@ -75,7 +75,7 @@ if(isset($_SESSION['msg']))
     <div class="form-group">
       <label for="role">Role: </label>
       <select name="role" class="form-control" id="role">
-        <option value="admin">Admin</option>
+        <!--<option value="admin">Admin</option> -->
         <option value="user">User</option>
       </select>
     </div>

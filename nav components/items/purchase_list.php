@@ -72,7 +72,7 @@ else
         
               $("#print").click(function()
               {
-                $("#table").printArea()
+                window.print();
               })
         })
 

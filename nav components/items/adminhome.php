@@ -1,7 +1,6 @@
 <?php // checking user logged in or not
  session_start();
  $email=$_SESSION['email'];
-
      include('./config.php');
      $sql="SELECT * FROM `users` where email='$email' ";
      $res = $conn->query($sql);
@@ -230,13 +229,6 @@
                         </div>
 
                         <div class="dropdown-item">
-                        <a href="#" class="sub-menu-link">
-                            <img src="images/help.png">
-                            <p>Help and support</p>
-                            <span>></span>
-                        </a>
-                        </div>
-                        <div class="dropdown-item">
                         <a href="http://localhost/project/login/logout.php" class="sub-menu-link">
                             <img src="images/logout.png">
                             <p>Logout</p>
@@ -267,7 +259,7 @@
                     <img src="images/user1.png">
                 </div>
                 <div class="card-content">
-                    <div class="card-content-1 "><a href="" class="user-link">USER</a>
+                    <div class="card-content-1 "><a href="./user_info.php" class="user-link">USER</a>
                     </div>    
                 </div>
                 </div>
@@ -283,7 +275,7 @@
                 </div>
                 <div class="card-content">
                     <div class="card-content-2">
-                        <a href="" class="user-link cat-link">CATEGORIES</a>
+                        <a href="./card_category.php" class="user-link cat-link">CATEGORIES</a>
                     </div>
                 </div>
             </div>
@@ -298,7 +290,7 @@
                 </div>
                 <div class="card-content">
                     <div class="card-content-3">
-                        <a href="" class="user-link item-link">ITEMS</a>
+                        <a href="./update.php" class="user-link item-link">ITEMS</a>
                     </div>
                 </div>
             </div>
@@ -313,7 +305,7 @@
                 </div>
                 <div class="card-content">
                     <div class="card-content-4">
-                        <a href="" class="user-link summary-link">PURCHASE SUMMARY</a>
+                        <a href="./purchasereport.php" class="user-link summary-link">PURCHASE SUMMARY</a>
                     </div>
                 </div>
             </div>
@@ -327,7 +319,7 @@
                 </div>
                     <div class="card-content">
                         <div class="card-content-5">
-                            <a href="" class="user-link report-link">Report </a>
+                            <a href="./report.php" class="user-link report-link">Report </a>
                         </div>
                     
                     </div>
@@ -342,7 +334,7 @@
     <script>
         function purchase()
         {
-            location.href ="http://localhost/project/login/nav%20components/items/purchasereport.php";
+            location.href ="./purchasereport.php";
 
         }
 

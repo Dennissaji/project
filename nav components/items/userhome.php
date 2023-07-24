@@ -229,13 +229,6 @@
                         </div>
 
                         <div class="dropdown-item">
-                        <a href="#" class="sub-menu-link">
-                            <img src="images/help.png">
-                            <p>Help and support</p>
-                            <span>></span>
-                        </a>
-                        </div>
-                        <div class="dropdown-item">
                         <a href="http://localhost/project/login/logout.php" class="sub-menu-link">
                             <img src="images/logout.png">
                             <p>Logout</p>
@@ -275,7 +268,7 @@
                     <img src="images/user1.png">
                 </div>
                 <div class="card-content">
-                    <div class="card-content-1 "><a href="" class="user-link">USERS</a>
+                    <div class="card-content-1 "><a href="./user_info.php" class="user-link">USERS</a>
                     </div>    
                 </div>
                 </div>
@@ -291,7 +284,7 @@
                 </div>
                 <div class="card-content">
                     <div class="card-content-2">
-                        <a href="" class="user-link cat-link">CATEGORIES</a>
+                        <a href="./card_category.php" class="user-link cat-link">CATEGORIES</a>
                     </div>
                 </div>
             </div>
@@ -306,14 +299,15 @@
                 </div>
                 <div class="card-content">
                     <div class="card-content-3">
-                        <a href="" class="user-link item-link">ITEMS</a>
+                        <a href="./product_filter.php" class="user-link item-link">ITEMS</a>
                     </div>
                 </div>
             </div>
         </div>
 
             <!--CARD-4-->
-
+        <?php if($dsgn=='staff')
+        {?>
         <div class="child child-4" id="card4" onclick="purchase()">
             <div class="card">
                 <div class="card-image-user">
@@ -321,7 +315,7 @@
                 </div>
                 <div class="card-content">
                     <div class="card-content-4">
-                        <a href="" class="user-link summary-link">PURCHASE SUMMARY</a>
+                        <a href="./purchasereport.php" class="user-link summary-link">PURCHASE SUMMARY</a>
                     </div>
                 </div>
             </div>
@@ -335,12 +329,13 @@
                 </div>
                     <div class="card-content">
                         <div class="card-content-5">
-                            <a href="" class="user-link report-link">Report </a>
+                            <a href="./report.php" class="user-link report-link">Report </a>
                         </div>
                     
                     </div>
             </div>
         </div>
+        <?php }?>
         </div>
      
      
@@ -361,7 +356,7 @@
 
         function items()
         {
-            location.href= "./itemsdisplay.php"
+            location.href= "./product_filter.php"
         }
         function report()
         {
